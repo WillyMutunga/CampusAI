@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CampusAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary: #6366f1;
+            --bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .logout-btn {
+            background-color: #fee2e2;
+            color: #ef4444 !important;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(99, 102, 241, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+            margin-bottom: -120px;
+            clip-path: ellipse(150% 100% at 50% 0%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Campus Animations */
+        .campus-scene {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: sway 4s infinite ease-in-out;
+        }
+
+        @keyframes sway {
+
+            0%,
+            100% {
+                transform: scaleY(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scaleY(1.05) rotate(2deg);
+            }
+        }
+
+        .cloud {
+            position: absolute;
+            top: 15%;
+            width: 180px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            animation: drift 35s infinite linear;
+        }
+
+        @keyframes drift {
+            from {
+                transform: translateX(-150px);
+            }
+
+            to {
+                transform: translateX(calc(100vw + 150px));
+            }
+        }
+
+        .student-icon {
+            position: absolute;
+            bottom: 15px;
+            font-size: 2.5rem;
+            opacity: 0.6;
+            animation: walk 25s infinite linear;
+        }
+
+        @keyframes walk {
+            from {
+                left: -50px;
+            }
+
+            to {
+                left: 110%;
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1rem;
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Profile Highlight in Hero */
+        .hero-profile-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 1rem;
+            transition: all 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-profile-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Dashboard Body */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #eff6ff;
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.02);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #e2e8f0;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: #f8fafc;
+            border-color: #cbd5e1;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Animation for Hero */
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero {
+                height: auto;
+                padding-bottom: 4rem;
+                clip-path: ellipse(180% 100% at 50% 0%);
+            }
+
+            .container {
+                padding: 0 1rem 3rem;
+                margin-top: -2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/dashboard" class="navbar-brand">
+            <i class="fas fa-graduation-cap"></i> CampusAI
+        </a>
+        <div class="nav-links">
+            <a href="/dashboard">Home</a>
+            <a href="/profile">My Profile</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="campus-scene">
+            <!-- Animated Trees -->
+            <div class="tree" style="left: 5%; animation-delay: 0s;"></div>
+            <div class="tree" style="left: 15%; animation-delay: 1.5s; height: 40px;"></div>
+            <div class="tree" style="right: 10%; animation-delay: 0.5s;"></div>
+            <div class="tree" style="right: 25%; animation-delay: 2s; height: 50px;"></div>
+
+            <!-- Animated Clouds -->
+            <div class="cloud" style="top: 10%; animation-duration: 40s;"></div>
+            <div class="cloud" style="top: 30%; animation-duration: 25s; animation-delay: -5s;"></div>
+            <div class="cloud" style="top: 15%; right: -200px; animation-duration: 35s; animation-delay: -15s;"></div>
+
+            <!-- Animated Student Icons -->
+            <div class="student-icon" style="animation-delay: 0s; color: white;"><i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="student-icon" style="animation-delay: 8s; color: #facc15;"><i class="fas fa-walking"></i></div>
+            <div class="student-icon" style="animation-delay: 15s; color: #4ade80;"><i class="fas fa-bicycle"></i></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Welcome Back, {{ name.split(' ')[0] }}!</h1>
+            <p>Your portal to campus information and intelligent assistance.</p>
+            <a href="/profile" class="hero-profile-btn">
+                <i class="fas fa-user-circle"></i> View My Student Profile
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        {% if fee_balance > 0 %}
+        <div
+            style="background-color: #fee2e2; color: #b91c1c; padding: 1rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #fecaca; display: flex; align-items: center; gap: 1rem; animation: fadeInUp 0.5s ease-out;">
+            <div
+                style="background: white; padding: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: #dc2626;">
+                <i class="fas fa-exclamation-circle" style="font-size: 1.25rem;"></i>
+            </div>
+            <div>
+                <strong style="display: block; margin-bottom: 2px;">Action Required</strong>
+                Hello {{ name.split(' ')[0] }}, you have an outstanding balance of <strong>KES {{ fee_balance
+                    }}</strong>. Please clear this to ensure exam eligibility.
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="quick-actions">
+            <!-- Chatbot Card -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Campus Assistant</h3>
+                <p>Have questions about units, fees, or campus life? Our AI assistant is here to help 24/7.</p>
+                <a href="/chat" class="btn btn-primary">
+                    <i class="fas fa-comments"></i> Start Chating
+                </a>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="card">
+                <div class="card-icon" style="background-color: #fef3c7; color: #d97706;">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3>My Profile</h3>
+                <p>Manage your student information, update your contact details, and view your registration status.</p>
+                <a href="/profile" class="btn btn-outline">
+                    <i class="fas fa-cog"></i> Manage Account
+                </a>
+            </div>
+
+            <!-- Academic Card -->
+            <div class="card">
+                <div class="card-icon" style="background-color: #ecfdf5; color: #059669;">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3>Fee Records</h3>
+                <p>Download your latest fee statements and view your payment history verified by the university.</p>
+                <a href="/static/uploads/fee_structure.pdf" target="_blank" class="btn btn-outline">
+                    <i class="fas fa-download"></i> View Statement
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Adding mouse movement effect to floating elements
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            document.querySelectorAll('.floating-element').forEach(el => {
+                el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 10px rgba(37, 211, 102, 0.5);
+            color: #FFF;
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: currentColor;
+        }
+
+        /* Adjust for mobile */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+    <a href="https://wa.me/254741233179" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with administration on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 2A13.9 13.9 0 0 0 2 16a13.8 13.8 0 0 0 2.2 7.5L2 30l6.7-2.1A13.8 13.8 0 0 0 16 30a13.9 13.9 0 0 0 0-27.8zm0 25.5a11.6 11.6 0 0 1-6-1.7l-.4-.2-4.4 1.4 1.4-4.3-.3-.4A11.6 11.6 0 0 1 16 4.3a11.6 11.6 0 0 1 0 23.2zm6.3-8.6c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2c-.3.4-.9 1-1.1 1.3-.2.3-.4.3-.8.1s-1.4-.5-2.7-1.6c-1-1-1.6-2.1-1.8-2.4s0-.5.2-.6c.2-.2.3-.4.5-.6s.3-.4.4-.7c.1-.3 0-.5 0-.7s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.6c-.3 0-.7.1-1.1.5s-1.4 1.4-1.4 3.4 1.4 4 1.6 4.3c.2.3 3 4.5 7.1 6.3 1 .4 1.8.7 2.4.9 1 .3 1.9.3 2.6.2.8-.1 2.3-.9 2.7-1.9s.4-1.8.3-2c0-.3-.3-.4-.7-.6z" />
+        </svg>
+    </a>
+</body>
+
+</html>

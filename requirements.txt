@@ -1,0 +1,17 @@
+nltk
+numpy
+tensorflow-cpu
+flask
+flask-sqlalchemy
+flask-login
+mysql-connector-python
+numpy
+tensorflow
+nltk
+
+requests
+mysql-connector-python
+beautifulsoup4
+selenium
+webdriver-manager
+google-generativeai

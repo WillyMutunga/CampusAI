@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Dynamic Content - CampusAI Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --bg-color: #f3f4f6;
+            --container-bg: #ffffff;
+            --text-color: #1f2937;
+            --secondary-text: #6b7280;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .navbar-links a:hover {
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #4f46e5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+        }
+
+        .btn-danger {
+            background-color: #ef4444;
+            color: white;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+
+        .item-list {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #f9fafb;
+        }
+
+        .list-item-content h3 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .list-item-content p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+        }
+
+        .flash-messages {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+        }
+
+        .flash-message {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flash-success {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+
+        .flash-error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/admin" class="navbar-brand">
+            <i class="fas fa-shield-alt"></i> CampusAI Admin
+        </a>
+        <div class="navbar-links">
+            <a href="/admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/chat"><i class="fas fa-comment-dots"></i> Go to Chat</a>
+        </div>
+    </nav>
+
+    <div class="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="flash-message flash-{{ category }}">
+            <i class="fas fa-info-circle"></i> {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="container">
+        <!-- Navigation Links Form -->
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-compass"></i> Manage Navigation</h2>
+            </div>
+            <form method="POST" action="/admin/dynamic_content">
+                <input type="hidden" name="action_type" value="add_nav">
+                <div class="form-group">
+                    <label>Title (e.g., Home Dashboard)</label>
+                    <input type="text" name="nav_title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>URL (e.g., /dashboard)</label>
+                    <input type="text" name="nav_url" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Icon Class (e.g., fas fa-home)</label>
+                    <input type="text" name="nav_icon" class="form-control" required
+                        placeholder="Find classes on fontawesome.com">
+                </div>
+                <div class="form-group">
+                    <label>Sort Order (Optional)</label>
+                    <input type="number" name="nav_order" class="form-control" value="0">
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Link</button>
+            </form>
+
+            <div class="item-list">
+                {% for link in nav_links %}
+                <div class="list-item">
+                    <div class="list-item-content">
+                        <h3><i class="{{ link.icon }}"></i> {{ link.title }}</h3>
+                        <p>URL: {{ link.url }} | Order: {{ link.order }}</p>
+                    </div>
+                    <form method="POST" action="/admin/dynamic_content/delete_nav/{{ link.id }}" style="margin: 0;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Delete this link?');"><i
+                                class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+                {% else %}
+                <p style="color: var(--secondary-text); text-align: center;">No navigation links added yet.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- News Announcements Form -->
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-bullhorn"></i> Manage News</h2>
+            </div>
+            <form method="POST" action="/admin/dynamic_content">
+                <input type="hidden" name="action_type" value="add_news">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="news_title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Content Summary</label>
+                    <textarea name="news_content" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Date String (e.g., "Today", "Oct 15")</label>
+                    <input type="text" name="news_date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Border Color (Hex or Name)</label>
+                    <input type="color" name="news_color" class="form-control" value="#6366f1"
+                        style="height: 40px; padding: 2px;">
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add News</button>
+            </form>
+
+            <div class="item-list">
+                {% for news in news_items %}
+                <div class="list-item" style="border-left: 4px solid {{ news.color }};">
+                    <div class="list-item-content">
+                        <h3>{{ news.title }}</h3>
+                        <p>{{ news.content }}</p>
+                        <p style="font-size: 0.75rem; color: #9ca3af; margin-top: 5px;">{{ news.date_posted }}</p>
+                    </div>
+                    <form method="POST" action="/admin/dynamic_content/delete_news/{{ news.id }}"
+                        style="margin: 0; padding-left: 10px;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Delete this news?');"><i
+                                class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+                {% else %}
+                <p style="color: var(--secondary-text); text-align: center;">No news announcements added yet.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

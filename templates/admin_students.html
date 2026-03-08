@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students - CampusAI Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: #1f2937;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #6366f1;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #374151;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #d1d5db;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #374151;
+            color: white;
+        }
+
+        .nav-link i {
+            margin-right: 0.75rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #111827;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #f9fafb;
+            color: #4b5563;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-admin {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-student {
+            background-color: #eff6ff;
+            color: #1e40af;
+        }
+
+        .btn-promote {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            text-decoration: none;
+        }
+
+        .btn-promote:hover {
+            background-color: #4338ca;
+        }
+
+        .btn-promote.disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">CampusAI Admin</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('admin_dashboard') }}" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+            <li><a href="{{ url_for('admin_profile') }}" class="nav-link"><i class="fas fa-user-circle"></i> Profile</a>
+            </li>
+            <li><a href="{{ url_for('admin_students') }}" class="nav-link active"><i class="fas fa-users"></i>
+                    Students</a></li>
+            <li><a href="{{ url_for('admin_knowledge') }}" class="nav-link"><i class="fas fa-book"></i> Knowledge
+                    Base</a></li>
+            <li><a href="{{ url_for('admin_queries') }}" class="nav-link"><i class="fas fa-comment-dots"></i> User
+                    Queries</a></li>
+            <li><a href="{{ url_for('upload_fee_structure') }}" class="nav-link"><i class="fas fa-file-upload"></i>
+                    Upload Fees</a></li>
+            <li><a href="{{ url_for('logout') }}" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Student Management</h1>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div style="background-color: #d1fae5; color: #065f46; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.student_id }}</td>
+                        <td>{{ student.full_name }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>
+                            {% if student.is_admin %}
+                            <span class="badge badge-admin">Admin</span>
+                            {% else %}
+                            <span class="badge badge-student">Student</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if not student.is_admin %}
+                            <a href="{{ url_for('promote_user', student_id=student.student_id) }}"
+                                class="btn-promote">Make Admin</a>
+                            {% else %}
+                            {% if student.student_id == current_user.student_id %}
+                            <span class="badge badge-admin">You</span>
+                            {% else %}
+                            <a href="{{ url_for('demote_user', student_id=student.student_id) }}" class="btn-promote"
+                                style="background-color: #ef4444;">Demote</a>
+                            {% endif %}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+</body>
+
+</html>
