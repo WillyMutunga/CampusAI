@@ -75,4 +75,5 @@ class NewsItem(db.Model):
     content = db.Column(db.Text, nullable=False)
     date_posted = db.Column(db.String(50), nullable=False) # e.g. "Today", "2 days ago", or actual date Let admin type string
     color = db.Column(db.String(20), default="#6366f1") # Default primary color for left border
+    image_paths = db.Column(db.Text, default="") # Comma separated list of image filenames
     created_at = db.Column(db.DateTime, server_default=db.func.now())

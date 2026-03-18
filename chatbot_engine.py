@@ -31,14 +31,60 @@ def load_chatbot_model():
         words = data['words']
         classes = data['classes']
         print("Chatbot model (re)loaded successfully.", flush=True)
+        # Pre-warm the NLTK lemmatizer so the first user request doesn't hang for 15 seconds
+        try:
+            predict_class("wake up")
+            print("Chatbot model pre-warmed successfully.", flush=True)
+        except Exception as inner_e:
+            print(f"Pre-warm skipped or failed: {inner_e}", flush=True)
     except Exception as e:
         print(f"Error loading chatbot model: {e}", flush=True)
 
 # Initial load
 load_chatbot_model()
 
-# 1. Database Connection Logic
-# 1. Database Connection Logic - REMOVED (Handled by Flask-SQLAlchemy)
+# Global Cache
+model_data = {"intents": []}
+qa_cache = []
+
+def init_qa_cache():
+    """Load QAPairs and compile regex tokens once during startup."""
+    global qa_cache, model_data
+    import re
+    # Load model.json instead of intents.json
+    try:
+        import json
+        with open('model.json', 'r') as f:
+            model_data = json.load(f)
+            # Ensure it's in the standard format
+            if 'intents' not in model_data:
+                model_data = {'intents': model_data}
+    except Exception as e:
+        print(f"Error loading model.json: {e}")
+
+    try:
+        from app import app
+        from models import QAPair
+        with app.app_context():
+            all_qa = QAPair.query.all()
+            qa_cache.clear()
+            for qa in all_qa:
+                # Pre-tokenize the database questions
+                question_tokens = set(re.findall(r'\w+', qa.question.lower()))
+                qa_cache.append({
+                    'id': qa.id,
+                    'question': qa.question,
+                    'answer': qa.answer,
+                    'source_url': qa.source_url,
+                    'tokens': question_tokens
+                })
+            print(f"Loaded {len(qa_cache)} QAPairs into cache.", flush=True)
+    except Exception as e:
+        print(f"Warning: Could not load QAPairs into cache: {e}", flush=True)
+
+# Call this later from app.py
+# init_qa_cache()
+
 
 # 2. Text Preprocessing
 def clean_up_sentence(sentence):
@@ -78,107 +124,89 @@ def predict_class(sentence):
 
 # 4. Fetch Response (Database Logic via ORM)
 def get_response(intents_list, user_query_text="", student_id=None, ratio=1.0):
-    tag = intents_list[0]['intent'] if intents_list else 'unknown'
-    probability = float(intents_list[0]['probability']) if intents_list else 0.0
+    global qa_cache, model_data
+    
+    model_tag = intents_list[0]['intent'] if intents_list else 'unknown'
+    model_prob = float(intents_list[0]['probability']) if intents_list else 0.0
     
     response = ""
     source = "local"
+    tag = model_tag
     
-    # Load intents JSON for fallback responses (greeting, goodbye)
-    import json
     import random
-    try:
-        with open('intents.json', 'r') as f:
-            intents_data = json.load(f)
-    except:
-        intents_data = {"intents": []}
+    import re
 
-    # If confidence is low OR ratio of recognized words is low, fallback to Gemini
-    # Use 0.5 as a reasonable threshold for recognizing the sentence context
-    # PRIORITY 1: Functional Intents (Database Queries) - specific interactive features
-    # These should take precedence if confidence is high, as they provide dynamic user-specific data.
-    if tag == 'fee_inquiry' and probability > 0.8:
+    # PRIORITY 1: Functional Intents
+    if model_tag == 'fee_inquiry' and model_prob > 0.8:
         response = "Please visit the student portal to verify your up-to-date fee balance."
-        return response # Early return for specific function
-    elif tag == 'fee_structure' and probability > 0.8:
+        return response
+    elif model_tag == 'fee_structure' and model_prob > 0.8:
         response = "You can download the latest fee structure here: <a href='/static/uploads/fee_structure.pdf' target='_blank'>Download Fee Structure</a>."
         return response
 
-    # PRIORITY 2: Scraped Knowledge Base (QAPair)
-    # Check this BEFORE generic intents (like 'number', 'greeting') to ensure we use specific scraped info.
-    print(f"Checking QAPairs for: {user_query_text}", flush=True)
+    # Calculate QA Match Score using cache
+    print(f"Checking cached QAPairs for: {user_query_text}", flush=True)
     qa_response = None
+    best_qa_match = None
+    highest_qa_score = 0.0
+    
     try:
-        # Flexible matching logic using Token Overlap
-        all_qa = QAPair.query.all()
-        best_match = None
-        highest_score = 0.0
-        
-        query_tokens = set(nltk.word_tokenize(user_query_text.lower()))
+        query_tokens = set(re.findall(r'\w+', user_query_text.lower()))
         stop_words = {'what', 'where', 'how', 'the', 'is', 'are', 'in', 'at', 'to', 'a', 'an', 'of', 'tell', 'me', 'about'}
-        query_tokens = query_tokens - stop_words
-        
-        if not query_tokens:
-             query_tokens = set(nltk.word_tokenize(user_query_text.lower()))
+        query_tokens_filtered = query_tokens - stop_words
+        if not query_tokens_filtered:
+            query_tokens_filtered = query_tokens
 
-        for qa in all_qa:
-            question_tokens = set(nltk.word_tokenize(qa.question.lower()))
-            common = query_tokens & question_tokens
-            if not query_tokens: continue
+        for qa in qa_cache:
+            common = query_tokens_filtered & qa['tokens']
+            if not query_tokens_filtered: continue
             
-            score = len(common) / len(query_tokens)
-            if user_query_text.lower() in qa.question.lower():
+            score = len(common) / len(query_tokens_filtered)
+            if user_query_text.lower() in qa['question'].lower():
                 score += 0.5
             
-            if score > highest_score:
-                highest_score = score
-                best_match = qa
-        
-        print(f"Best QA Match Score: {highest_score}", flush=True)
-        
-        # Use a reasonable threshold. 0.3 is enough to beat "generic" matches usually.
-        # BUT for short queries, we need a much stricter threshold to avoid false positives (e.g. "hi" matching a long sentence)
-        threshold = 0.35
-        if len(query_tokens) < 3:
-            threshold = 0.8 # strict for short queries
-            
-        if best_match and highest_score >= threshold: 
-            qa_response = f"{best_match.answer}\n\n(Source: {best_match.source_url})"
-            source = "knowledge_base"
-            tag = "qa_pair_match"
-            
+            if score > highest_qa_score:
+                highest_qa_score = score
+                best_qa_match = qa
+                
+        print(f"Best QA Match Score: {highest_qa_score}", flush=True)
     except Exception as e:
         print(f"QA Pair Lookup Error: {e}")
 
-    if qa_response:
-        response = qa_response
-    
-    # PRIORITY 3: Standard Intents (greeting, etc.) from Model/JSON
-    # Only use if we didn't find a QA match
-    elif probability > 0.7:
-        if tag in ['greeting', 'goodbye']:
-            # Try DB first, then JSON
-            row = Knowledge.query.filter_by(intent_tag=tag).first()
-            if row:
-                response = row.content
-            else:
-                for i in intents_data['intents']:
-                    if i['tag'] == tag:
-                        response = random.choice(i['responses'])
-                        break
+    # Set threshold
+    qa_threshold = 0.35 if len(query_tokens) >= 3 else 0.8
+    model_threshold = 0.65
+
+    print(f"Model Score ({model_tag}): {model_prob:.2f} | QA Score: {highest_qa_score:.2f}")
+
+    # Comparison Logic
+    use_qa = best_qa_match and highest_qa_score >= qa_threshold
+    use_model = model_prob >= model_threshold
+
+    if use_qa and use_model:
+        # Compare scores to give the best answer
+        if highest_qa_score > model_prob:
+            response = f"{best_qa_match['answer']}\n\n(Source: {best_qa_match['source_url']})"
+            source = "knowledge_base"
+            tag = "qa_pair_match"
         else:
-            # Other general intents (including 'number', 'location', etc.)
-            # If QAPair didn't catch it, we fallback to these static responses.
-            row = Knowledge.query.filter_by(intent_tag=tag).first()
-            if row:
-                response = row.content
-            else:
-                for i in intents_data['intents']:
-                    if i['tag'] == tag:
-                        if i['responses']:
-                            response = random.choice(i['responses'])
-                        break
-                        
+            use_qa = False # Fall back to model handling below
+    elif use_qa:
+         response = f"{best_qa_match['answer']}\n\n(Source: {best_qa_match['source_url']})"
+         source = "knowledge_base"
+         tag = "qa_pair_match"
+
+    if not response and use_model:
+        # Standard Knowledge from Model JSON
+        for i in model_data['intents']:
+            # Handle both formats since model.json has intent and text
+            t = i.get('intent') or i.get('tag')
+            if t == model_tag:
+                # Use Responses array from Model JSON
+                if i.get('responses'):
+                    response = random.choice(i['responses'])
+                break
+
     # PRIORITY 4: Gemini Fallback
     if not response:
         response = get_gemini_response(user_query_text)
@@ -192,7 +220,7 @@ def get_response(intents_list, user_query_text="", student_id=None, ratio=1.0):
             query_text=user_query_text,
             response_text=response,
             intent_tag=tag,
-            confidence=probability,
+            confidence=max(model_prob, highest_qa_score),
             source=source
         )
         db.session.add(new_query)

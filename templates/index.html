@@ -142,6 +142,51 @@
             color: #9ca3af;
         }
 
+        /* Slideshow CSS for Announcements */
+        .slideshow-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            margin-top: 12px;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99, 102, 241, 0.4) transparent;
+        }
+
+        .slideshow-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .slideshow-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .slideshow-container::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.4);
+            border-radius: 4px;
+        }
+
+        .slideshow-slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slideshow-slide img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
         .prompt-btn {
             display: block;
             width: 100%;
@@ -473,6 +518,18 @@
                 <div class="announcement-card" style="border-left-color: {{ news.color }};">
                     <h4>{{ news.title }}</h4>
                     <p>{{ news.content }}</p>
+                    {% if news.image_paths %}
+                    {% set images = news.image_paths.split(',') %}
+                    {% if images|length > 0 and images[0] != "" %}
+                    <div class="slideshow-container">
+                        {% for img in images %}
+                        <div class="slideshow-slide">
+                            <img src="{{ url_for('static', filename='uploads/news/' ~ img) }}" alt="Announcement image">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
                     <span class="announcement-date">{{ news.date_posted }}</span>
                 </div>
                 {% endfor %}

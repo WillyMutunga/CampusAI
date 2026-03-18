@@ -29,8 +29,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SECURE'] = False # Update to True in production with HTTPS
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
+app.config['UPLOAD_FOLDER_NEWS'] = 'static/uploads/news'
 import os
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+os.makedirs(app.config['UPLOAD_FOLDER_NEWS'], exist_ok=True)
 
 db.init_app(app)
 
@@ -47,6 +49,12 @@ with app.app_context():
         db.create_all() # Ensure tables exist in loginapp and knowledge_db
     except Exception as e:
         print(f"DB Setup Warning: {e}")
+        
+    try:
+        import chatbot_engine
+        chatbot_engine.init_qa_cache()
+    except Exception as e:
+        print(f"Cache Setup Warning: {e}")
 
 
 @app.route("/")
@@ -468,8 +476,23 @@ def admin_dynamic_content():
             content = request.form.get("news_content")
             date_posted = request.form.get("news_date")
             color = request.form.get("news_color", "#6366f1")
+            
+            image_paths = []
+            if 'news_images' in request.files:
+                images = request.files.getlist('news_images')
+                from werkzeug.utils import secure_filename
+                import time
+                for img in images:
+                    if img and img.filename != '':
+                        filename = secure_filename(f"{int(time.time())}_{img.filename}")
+                        filepath = os.path.join(app.config['UPLOAD_FOLDER_NEWS'], filename)
+                        img.save(filepath)
+                        image_paths.append(filename)
+            
+            paths_string = ",".join(image_paths)
+
             if title and content and date_posted:
-                new_news = NewsItem(title=title, content=content, date_posted=date_posted, color=color)
+                new_news = NewsItem(title=title, content=content, date_posted=date_posted, color=color, image_paths=paths_string)
                 db.session.add(new_news)
                 db.session.commit()
                 flash("News announcement added successfully!", "success")

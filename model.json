@@ -1,1694 +1,3675 @@
 {
-    "intents":[
+   "intents": [
       {
-      "intent": "greeting",
-      "text": ["Hi", "How are you?", "Is anyone there?", "Hello", "Good day", "What's up", "how are ya", "heyy", "whatsup"],
-      "responses": ["Hello! I am your CampusAI Assistant. How can I help you today?", "Good to see you again! Feel free to ask me anything about MNU.", "Hi there, how can I help you navigate Mama Ngina University?"],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "GreetingUserRequest", "clear": false },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "about_mnu",
-      "text": ["What is MNU?", "Tell me about Mama Ngina University", "Where is the university located?", "history of mnu", "Who is the mentor university?"],
-      "responses": ["Mama Ngina University College (MNUC) is a constituent college of Kenyatta University, initially mentored by Moi University. It is located in Gatundu, Kiambu County."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "AboutMNU", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "vision_mission",
-      "text": ["What is the vision?", "university mission", "core values of mnu", "What is the motto?", "university philosophy"],
-      "responses": ["Vision: A Premier University that nurtures Competent and Value-based leaders. Mission: To provide transformative teaching, research, and community engagement. Motto: Shaping the Future."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "VisionMission", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "contacts",
-      "text": ["How do I contact MNU?", "University phone number", "Official email", "admission office contact", "registrar phone"],
-      "responses": ["General Inquiry: 020-208-4004 or info@mnu.ac.ke. Admissions: admissions@mnu.ac.ke. Registrar (ASA): +254 748 868 921."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "ContactRequest", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "fees",
-      "text": ["information about fee", "bank account details", "Equity bank mnu", "how much is school fees", "fee structure"],
-      "responses": ["Fees are payable to: Equity Bank (A/C: 0660282250603) or Co-operative Bank (A/C: 01129556920900). First-semester fee for new students is approx KES 34,700."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "FeeStructure", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "admission_docs",
-      "text": ["what documents do i need for registration?", "joining instructions", "admission letter", "medical form", "MNU/4 form"],
-      "responses": ["Required: Original admission letter, original and copies of academic certificates, and National ID. A satisfactory Medical Report (Form MNU/4) is mandatory."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "DocumentsForAdmission", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "academic_calendar",
-      "text": ["When do we report?", "semester dates 2025", "matriculation date", "When do exams start?", "next semester start"],
-      "responses": ["Semester 2 for 2026 begins with reporting on 6th January 2026. Lectures commence shortly after registration."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "AcademicCalendar", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "library",
-      "text": ["library hours", "is the library open on sunday?", "library contact", "past papers", "e-resources", "Where is the library?"],
-      "responses": ["The library is open Mon-Fri (8am-6pm) and Sat (9am-6pm). Closed on Sundays. Access e-resources at library.mnu.ac.ke."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "LibraryHours", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "ict_support",
-      "text": ["ict help", "student email problem", "how to set up 2fa", "eduroam wifi", "student portal issues", "reset portal password"],
-      "responses": ["Visit support.mnu.ac.ke for portal tickets or email ictsupport@mnu.ac.ke for email and 2FA issues. WiFi setup guides for Eduroam are on the support portal."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "ICTSupport", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "accommodation",
-      "text": ["hostel facility", "hostels near campus", "Qwetu Kejani", "where can i stay?", "hostel fees"],
-      "responses": ["MNU has an MOU with Qejani Hostels for safe student accommodation near campus. Students are responsible for their own meal arrangements."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "HostelRelatedQueries", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "clubs",
-      "text": ["student clubs", "list of societies", "mentorship club", "drama club", "Christian union", "Computer science club"],
-      "responses": ["Active clubs include Mentorship, Drama, Computer Science, and spiritual groups like the Christian Union and Muslim Association."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "ClubsAndSocieties", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "graduation",
-      "text": ["graduation requirements", "how to hire a gown", "clearance form", "returning academic regalia", "graduation dates"],
-      "responses": ["Graduands must fill the 'Academic Gowns Hiring Form'. Failure to return regalia on time incurs a KES 500 daily penalty."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "GraduationQueries", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "schools",
-      "text": ["What schools are in MNU?", "faculties available", "departments", "School of Health Sciences"],
-      "responses": ["Schools include: 1. Business, Humanities and Economics, 2. Pure and Applied Sciences, and 3. Health Sciences."],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "AskingCourses", "clear": true },
-      "entityType": "NA", "entities": []
-    },
-    {
-      "intent": "goodbye",
-      "text": ["cya", "see you", "bye bye", "Goodbye", "Bye", "gtg"],
-      "responses": ["Goodbye! Have a great day at Mama Ngina University.", "Talk to you later!", "Come back soon!"],
-      "extension": { "function": "", "entities": false, "responses": [] },
-      "context": { "in": "", "out": "LeavingUserRequest", "clear": false },
-      "entityType": "NA", "entities": []
-    },
-    {
-    "intent": "student_aid",
-    "text": [
-       "student aid programme",
-       "financial hardship assistance",
-       "help with basic necessities",
-       "food and toiletries support",
-       "How to apply for student aid?"
-    ],
-    "responses": [
-       "The MNUC Student Aid Programme supports students facing personal or financial hardship with basic necessities like food, toiletries, and clothing. Apply by downloading the form from the Student Affairs website and submitting it to head-studentaffairs@mnu.ac.ke."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "StudentWelfare", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "exam_irregularities",
-    "text": [
-       "what is an exam offence?",
-       "cheating in exams",
-       "carrying a phone in exam room",
-       "plagiarism in exams",
-       "consequences of exam irregularities"
-    ],
-    "responses": [
-       "Serious offences include possession of unauthorized materials (phones, notes), plagiarism, and impersonation. Involvement in any examination irregularity automatically leads to expulsion from the University College."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "ExamPolicy", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "online_learning",
-    "text": [
-       "how to access LMS",
-       "online classes",
-       "ODeL learning",
-       "LMS student guide",
-       "KENET conference platform"
-    ],
-    "responses": [
-       "Students can access ODeL online classes via the Learning Management System (LMS). Detailed video and PDF guides for students are available on the main MNU website under Online Learning Resources."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "DigitalLearning", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "disability_support",
-    "text": [
-       "services for PWDs",
-       "disability mainstreaming",
-       "accessibility on campus",
-       "extra time in exams for disability",
-       "mentorship for students with disabilities"
-    ],
-    "responses": [
-       "MNU is committed to inclusivity, providing ramps, tactile lifts, and accessible websites. Students with disabilities are allocated an extra 30 minutes in examinations and have access to mentorship services."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "InclusivitySupport", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "security_emergency",
-    "text": [
-       "security hotline",
-       "emergency number",
-       "What to do in an emergency?",
-       "security on campus",
-       "how to report a crime"
-    ],
-    "responses": [
-       "In case of emergency, contact the Security Hotline at +254 741 016 799 or email security@mnu.ac.ke. Emergency notifications are also broadcasted via the university website and student email."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "EmergencyContact", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "complaints_feedback",
-    "text": [
-       "how to file a complaint",
-       "feedback and compliments",
-       "complaints desk location",
-       "MNU feedback email"
-    ],
-    "responses": [
-       "Complaints and compliments can be submitted via email to feedback@mnu.ac.ke. Physically, you can visit the Administration Building, Room 207, to fill out the official form."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "UserFeedback", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "helb_loans",
-    "text": [
-       "HELB loan application",
-       "student loans in Kenya",
-       "how to apply for HELB",
-       "HELB products for students"
-    ],
-    "responses": [
-       "Students can apply for HELB loans and scholarships through the official HELB mobile app or website. For assistance, students can visit Huduma Centres or the HELB Student Service Centre."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "FinancialAid", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "elections_conduct",
-    "text": [
-       "SAMNUC elections",
-       "voting rights at MNU",
-       "election offences",
-       "conduct during campaigns",
-       "student leadership elections"
-    ],
-    "responses": [
-       "SAMNUC elections are governed by a strict Electoral Code. Offences include use of abusive language, defacing posters, or enlisting goons. Breaching this code can lead to disqualification and disciplinary action by the University College Student Disciplinary Committee."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "Governance", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "careers_vacancies",
-    "text": [
-       "job opportunities at MNU",
-       "teaching vacancies",
-       "internal advertisements",
-       "how to apply for a job at the university",
-       "careers portal",
-       "work at Mama Ngina University"
-    ],
-    "responses": [
-       "All career opportunities and job vacancies are posted on the 'Vacancies' section of the official MNU website. Applications should typically be sent to the Office of the Principal or via vacancies@mnu.ac.ke as specified in the advertisement."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "CareerQueries", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "tenders_procurement",
-    "text": [
-       "tender notices",
-       "procurement opportunities",
-       "supply of goods and services",
-       "tender documents download",
-       "pre-qualification of suppliers"
-    ],
-    "responses": [
-       "Interested bidders can find active tender notices on the university website under the 'Tenders' tab. Completed documents are usually submitted to the tender box at the Administration Block or via tenders@mnu.ac.ke."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "ProcurementInfo", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "alumni_association",
-    "text": [
-       "MNU alumni association",
-       "how to join alumni",
-       "alumni benefits",
-       "networking for graduates",
-       "alumni office contact"
-    ],
-    "responses": [
-       "The MNU Alumni Association focuses on maintaining a lifelong connection between the university and its graduates. You can register as an alumnus upon graduation to access networking events and mentorship opportunities by contacting alumni@mnu.ac.ke."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "AlumniRelations", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "counseling_mental_health",
-    "text": [
-       "counseling services",
-       "mental health support",
-       "where to get psychological help",
-       "depression and anxiety support",
-       "talk to a counselor"
-    ],
-    "responses": [
-       "The University provides confidential counseling services through the Office of the Dean of Students. Students can walk into the Student Affairs office or book an appointment via email for support with academic, social, or personal challenges."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "WellnessSupport", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "transport_shuttle",
-    "text": [
-       "university bus schedule",
-       "transport services",
-       "shuttle to Gatundu town",
-       "transport for academic trips"
-    ],
-    "responses": [
-       "The university provides transport services for official academic trips and organized student events. Daily shuttle schedules for staff and students between the campus and Gatundu town are usually posted on the notice boards."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "Logistics", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "student_conduct_rules",
-    "text": [
-       "university rules and regulations",
-       "student code of conduct",
-       "disciplinary procedures",
-       "rules on demonstrations",
-       "alcohol and drug policy"
-    ],
-    "responses": [
-       "Students are expected to adhere to the MNU Student Code of Conduct, which prohibits drug abuse, violence, and unauthorized demonstrations. Breaches are handled by the Student Disciplinary Committee and can lead to suspension or expulsion."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "DisciplinePolicy", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "research_publications",
-    "text": [
-       "university research papers",
-       "institutional repository",
-       "research policy",
-       "MNU journal",
-       "funding for research"
-    ],
-    "responses": [
-       "MNU promotes research through its Research, Innovation, and Outreach (RIO) office. Academic staff and students' research works are hosted on the MNU Institutional Repository (e-space) for global visibility."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "ResearchInfo", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "downloads_forms",
-    "text": [
-       "download application forms",
-       "inter-faculty transfer form",
-       "missing marks form",
-       "deferment form",
-       "clearance form download"
-    ],
-    "responses": [
-       "Commonly used forms such as the Admission Medical Form (MNU/4), Deferment forms, and Clearance forms are available for download in the 'Downloads' section of the university website."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "AdministrativeForms", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "news_updates",
-    "text": [
-       "latest news from MNU",
-       "university announcements",
-       "upcoming events",
-       "press releases",
-       "what is happening on campus?"
-    ],
-    "responses": [
-       "Stay updated by checking the 'Latest News' and 'Announcements' sections on the university home page. Recent updates include ISO certification progress and professional academy launches."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "CampusUpdates", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "governance_council",
-    "text": [
-       "who is the chancellor?",
-       "university council members",
-       "Who is the Chairman of the Council?",
-       "university management team",
-       "governance structure of mnu"
-    ],
-    "responses": [
-       "Mama Ngina University College is governed by a University Council chaired by Dr. Mutuku Matingi. The management is led by the Principal, Prof. Lukoye Atwoli, supported by the Deputy Principal (ASA) and Deputy Principal (AFP)."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "GovernanceInfo", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "environmental_policy",
-    "text": [
-       "environmental sustainability",
-       "is MNU green?",
-       "tree planting initiatives",
-       "waste management policy",
-       "climate change center"
-    ],
-    "responses": [
-       "MNU is committed to environmental sustainability through its 'Green Campus' initiative. This includes regular tree-planting events, sustainable waste management, and the establishment of the Center for Climate Change and Environmental Studies."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "Sustainability", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "gender_mainstreaming",
-    "text": [
-       "gender policy",
-       "equality on campus",
-       "prevention of sexual harassment",
-       "gender desk location",
-       "support for female students"
-    ],
-    "responses": [
-       "MNU maintains a zero-tolerance policy towards sexual harassment and gender-based violence. The Gender Mainstreaming Committee ensures equal opportunities and provides a secure reporting mechanism via the Gender Desk in the Student Affairs office."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "EqualityPolicy", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "academic_partnerships",
-    "text": [
-       "KU mentorship",
-       "Kenyatta University link",
-       "university collaborations",
-       "industrial attachments link",
-       "MOU with other institutions"
-    ],
-    "responses": [
-       "As a constituent college of Kenyatta University (KU), MNU benefits from KU’s academic mentorship and quality assurance frameworks. The university also maintains MOUs with various industrial partners for student attachments and internships."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "Partnerships", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "performance_contracting",
-    "text": [
-       "service delivery charter",
-       "performance contract",
-       "university ranking",
-       "public service standards",
-       "citizen delivery charter"
-    ],
-    "responses": [
-       "MNU adheres to the Government of Kenya Performance Contracting guidelines to ensure efficiency. Our Service Delivery Charter, visible in all administrative blocks, outlines our commitment to timely and transparent service for all stakeholders."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "Accountability", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "anti_corruption",
-    "text": [
-       "corruption reporting",
-       "anti-corruption committee",
-       "integrity at MNU",
-       "how to report bribery",
-       "ethics and transparency"
-    ],
-    "responses": [
-       "MNU has a dedicated Corruption Prevention Committee. You can report any unethical behavior or bribery anonymously through the corruption reporting boxes placed around campus or via integrity@mnu.ac.ke."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "EthicsInfo", "clear": true },
-    "entityType": "NA", "entities": []
- },
- {
-    "intent": "student_medical_insurance",
-    "text": [
-       "student insurance",
-       "NHIF for students",
-       "medical cover on campus",
-       "inpatient and outpatient student services"
-    ],
-    "responses": [
-       "All students are required to have a valid NHIF cover or an equivalent medical insurance. This ensures access to both inpatient services at recognized hospitals and outpatient care at the University Health Unit."
-    ],
-    "extension": { "function": "", "entities": false, "responses": [] },
-    "context": { "in": "", "out": "MedicalInfo", "clear": true },
-    "entityType": "NA", "entities": []
- },
-  {
-    "intent": "greeting",
-    "text": [
-       "Hi",
-       "How are you?",
-       "Is anyone there?",
-       "Hello",
-       "Good day",
-       "What's up",
-       "how are ya",
-       "heyy",
-       "whatsup",
-       "??? ??? ??"
-    ],
-    "responses": [
-       "Hello!",
-       "Good to see you again!",
-       "Hi there, how can I help?"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "GreetingUserRequest",
-        "clear": false
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "goodbye",
-    "text": [
-       "cya",
-       "see you",
-       "bye bye",
-       "See you later",
-       "Goodbye",
-       "I am Leaving",
-       "Bye",
-       "Have a Good day",
-       "talk to you later",
-       "ttyl",
-       "i got to go",
-       "gtg"
-    ],
-    "responses": [
-       "Sad to see you go :(",
-       "Talk to you later",
-       "Goodbye!",
-       "Come back soon"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "LeavingUserRequest",
-        "clear": false
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "creator",
-    "text": [
-       "what is the name of your developers",
-       "what is the name of your creators",
-       "what is the name of the developers",
-       "what is the name of the creators",
-       "who created you",
-       "your developers",
-       "your creators",
-       "who are your developers",
-       "developers",
-       "you are made by",
-       "you are made by whom",
-       "who created you",
-       "who create you",
-       "creators",
-       "who made you",
-       "who designed you"
-    ],
-    "responses": [
-       "Willy Mutunga"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-  },
-  "context":  {
-        "in": "",
-        "out": "AskingCreator",
-        "clear": true
-  },
-  "entityType": "NA",
-  "entities": []
- },
-  {
-    "intent": "name",
-    "text": [
-       "name",
-       "your name",
-       "do you have a name",
-       "what are you called",
-       "what is your name",
-       "what should I call you",
-       "whats your name?",
-       "what are you",
-       "who are you",
-       "who is this",
-       "what am i chatting to",
-       "who am i taking to",
-       "what are you"
-    ],
-    "responses": [
-       "You can call me Mind Reader.",
-       "I'm Mind Reader",
-       "I am a Chatbot.",
-       "I am your helper"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "AskingMyName",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "hours",
-    "text": [
-       "timing of college",
-       "what is college timing",
-       "working days",
-       "when are you guys open",
-       "what are your hours",
-       "hours of operation",
-       "when is the college open",
-       "college timing",
-       "what about college timing",
-       "is college open on saturday",
-       "tell something about college timing",
-       "what is the college  hours",
-       "when should i come to college",
-       "when should i attend college",
-       "what is my college time",
-       "college timing",
-       "timing college"
-    ],
-    "responses": [
-       "College is open 8am-5pm Monday-Saturday!"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "CollegeTimings",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "number",
-    "text": [
-       "more info",
-       "contact info",
-       "how to contact college",
-       "college telephone number",
-       "college number",
-       "What is your contact no",
-       "Contact number?",
-       "how to call you",
-       "College phone no?",
-       "how can i contact you",
-       "Can i get your phone number",
-       "how can i call you",
-       "phone number",
-       "phone no",
-       "call"
-    ],
-    "responses": [
-       "You can contact at: 0702125192"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "ContactRequest",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "course",
-    "text": [
-       "list of courses",
-       "list of courses offered",
-       "list of courses offered in",
-       "what are the courses offered in your college?",
-       "courses?",
-       "courses offered",
-       "courses offered in (your univrsity(UNI) name)",
-       "courses you offer",
-       "branches?",
-       "courses available at UNI?",
-       "branches available at your college?",
-       "what are the courses in UNI?",
-       "what are branches in UNI?",
-       "what are courses in UNI?",
-       "branches available in UNI?",
-       "can you tell me the courses available in UNI?",
-       "can you tell me the branches available in UNI?",
-       "computer engineering?",
-       "computer",
-       "Computer engineering?",
-       "it",
-       "IT",
-       "Information Technology",
-       "AI/Ml",
-       "Mechanical engineering",
-       "Chemical engineering",
-       "Civil engineering"
-    ],
-    "responses": [
-       "Our university offers Bsc Computer Science, Bsc Mathematics and Computer Science, Statistics and Programming, Economics and Finance, Bachelor of Commerce, Bsc Nursing, Counselling Psychology, Public Policy and Administratiom, etc." ,
-       "View courses offered here <a target=\"_blank\" href=\"https://mnu.ac.ke/undergraduate-courses-2//\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "AskingCourses",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "fees",
-    "text": [
-       "information about fee",
-       "information on fee",
-       "tell me the fee",
-       "college fee",
-       "fee per semester",
-       "what is the fee of each semester",
-       "what is the fees of each year",
-       "what is fee",
-       "what is the fees",
-       "how much is the fees",
-       "fees for first year",
-       "fees",
-       "about the fees",
-       "tell me something about the fees",
-       "What is the fees of hostel",
-       "how much is the fees",
-       "hostel fees",
-    ],
-    "responses": [
-       "For Fee detail visit the student finance office located at the main adminstration block, lower ground."
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "FeeStructure",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "location",
-    "text": [
-       "where is the college located",
-       "college is located at",
-       "where is college",
-       "where is college located",
-       "address of college",
-       "how to reach college",
-       "college location",
-       "college address",
-       "wheres the college",
-       "how can I reach college",
-       "whats is the college address",
-       "what is the address of college",
-       "address",
-       "location"
-    ],
-    "responses": [
-       "<a target=\"_blank\" href=\"https://maps.app.goo.gl/NDEnuWKBEAUJ7oyK9\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-  " context":  {
-        "in": "",
-        "out": "AddressOfCollege",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "hostel",
-    "text": [
-       "hostel facility",
-       "hostel servive",
-       "hostel location",
-       "hostel address",
-       "hostel facilities",
-       "hostel fees",
-       "Does college provide hostel",
-       "Is there any hostel",
-       "Where is hostel",
-       "do you have hostel",
-       "do you guys have hostel",
-       "hostel",
-       "hostel capacity",
-       "what is the hostel fee",
-       "how to get in hostel",
-       "what is the hostel address",
-       "how far is hostel from college",
-       "hostel college distance",
-       "where is the hostel",
-       "how big is the hostel",
-       "distance between college and hostel",
-       "distance between hostel and college"
-    ],
-    "responses": [
-       "For hostel detail visit <a target=\"_blank\" href=\"ADD YOUR HOSTEL DETAIL PDF LINK OR ANY INFORMATION LINK OR ADD YOU OWN ANSWERS\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "HostelRelatedQueries",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "event",
-    "text": [
-       "events organised",
-       "list of events",
-       "list of events organised in college",
-       "list of events conducted in college",
-       "What events are conducted in college",
-       "Are there any event held at college",
-       "Events?",
-       "functions",
-       "what are the events",
-       "tell me about events",
-       "what about events"
-    ],
-    "responses": [
-       "For event detail visit <a target=\"_blank\" href=\"https://mnu.ac.ke/wp-content/uploads/2025/08/Calender-Of-Activities-2025-2026-Academic.pdf\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "EventRelatedQueries",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "document",
-    "text": [
-       "document to bring",
-       "documents needed for admision",
-       "documents needed at the time of admission",
-       "documents needed during admission",
-       "documents required for admision",
-       "documents required at the time of admission",
-       "documents required during admission",
-       "What document are required for admission",
-       "Which document to bring for admission",
-       "documents",
-       "what documents do i need",
-       "what documents do I need for admission",
-       "documents needed"
-    ],
-    "responses": [
-       "To know more about document required visit <a target=\"_blank\" href=\"ADD LINK OF ADMISSION GUIDANCE DOCUMENT FROM YOUR UNIVERSITY WEBSITE\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "DocumentsForAdmission",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "floors",
-    "text": [
-       "size of campus",
-       "building size",
-       "How many floors does college have",
-       "floors in college",
-       "floors in college",
-       "floors"
-    ],
-    "responses": [
-       "My College has a modern lecture theatre, adminstration block and Tuition complex which give the best ambience for student studies. "
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "FloorQueries",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "syllabus",
-    "text": [
-       "Syllabus for IT",
-       "what is the Information Technology syllabus",
-       "syllabus",
-       "timetable",
-       "what is IT syllabus",
-       "syllabus",
-       "What is next lecture"
-    ],
-    "responses": [
-       "Timetable provide direct to the students OR To know about syllabus visit <a target=\"_blank\" href=\"TIMETABLE LINK\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "SyllabusQueries",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "library",
-    "text": [
-       "is there any library",
-       "library facility",
-       "library facilities",
-       "do you have library",
-       "does the college have library facility",
-       "college library",
-       "where can i get books",
-       "book facility",
-       "Where is library",
-       "Library",
-       "Library information",
-       "Library books information",
-       "Tell me about library",
-       "how many libraries"
-    ],
-    "responses": [
-       "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"ADD LIBRARY DETAIL LINK\">here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "LibraryHours",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "infrastructure",
-    "text": [
-       "how is college infrastructure",
-       "infrastructure",
-       "college infrastructure"
-    ],
-    "responses": [
-       "Our University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Infra",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "canteen",
-    "text": [
-       "food facilities",
-       "canteen facilities",
-       "canteen facility",
-       "is there any canteen",
-       "Is there a cafetaria in college",
-       "Does college have canteen",
-       "Where is canteen",
-       "where is cafetaria",
-       "canteen",
-       "Food",
-       "Cafetaria"
-    ],
-    "responses": [
-       "Our university has canteen with variety of food available"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-  " context":  {
-        "in": "",
-        "out": "Snacking",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "menu",
-    "text": [
-       "food menu",
-       "food in canteen",
-       "Whats there on menu",
-       "what is available in college canteen",
-       "what foods can we get in college canteen",
-       "food variety",
-       "What is there to eat?"
-    ],
-    "responses": [
-       "we serve Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali and many more on menu"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Menu",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "placement",
-    "text": [
-       "What is college placement",
-       "Which companies visit in college",
-       "What is average package",
-       "companies visit",
-       "package",
-       "About placement",
-       "placement",
-       "recruitment",
-       "companies"
-    ],
-    "responses": [
-       "To know about placement visit <a target=\"_blank\" href=\"PLACEMENT INFORMATION LINK FROM YOUR UNIVERSITY WEBSITE IF THEY HAVE\">here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Placements",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "ithod",
-    "text": [
-       "Who is HOD",
-       "Where is HOD",
-       "it hod",
-       "name of it hod"
-    ],
-    "responses": [
-       "All engineering departments have only one hod XYZ who available on (Place name)"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "HODs",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "computerhod",
-    "text": [
-       "Who is computer HOD",
-       "Where is computer HOD",
-       "computer hod",
-       "name of computer hod"
-    ],
-    "responses": [
-       "All engineering departments have only one hod XYZ who available on (PLACE NAME)"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "ComputerHOD",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "extchod",
-    "text": [
-       "Who is extc HOD",
-       "Where is  extc HOD",
-       "extc hod",
-       "name of extc hod"
-    ],
-    "responses": [
-       "Different school wise hod are different.So be more clear with your school or department"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "DiffHODs",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "principal",
-    "text": [
-       "what is the name of principal",
-       "whatv is the principal name",
-       "principal name",
-       "Who is college principal",
-       "Where is principal's office",
-       "principal",
-       "name of principal"
-    ],
-    "responses": [
-       "XYZ is college principal and if you need any help then call your branch hod first.That is more appropriate"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "CollegePrincipal",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "sem",
-    "text": [
-       "exam dates",
-       "exam schedule",
-       "When is semester exam",
-       "Semester exam timetable",
-       "sem",
-       "semester",
-       "exam",
-       "when is exam",
-       "exam timetable",
-       "exam dates",
-       "when is semester"
-    ],
-    "responses": [
-       "Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "AcademicCalendar",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "admission",
-    "text": [
-       "what is the process of admission",
-       "what is the admission process",
-       "How to take admission in your college",
-       "What is the process for admission",
-       "admission",
-       "admission process"
-    ],
-    "responses": [
-       "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"LINK OF ADMISSION DOCUMENT\">website</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "ProcessOfAdmission",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "scholarship",
-    "text": [
-       "scholarship",
-       "Is scholarship available",
-       "scholarship engineering",
-       "scholarship it",
-       "scholarship ce",
-       "scholarship mechanical",
-       "scholarship civil",
-       "scholarship chemical",
-       "scholarship for AI/ML",
-       "available scholarships",
-       "scholarship for computer engineering",
-       "scholarship for IT engineering",
-       "scholarship for mechanical engineering",
-       "scholarship for civil engineering",
-       "scholarship for chemical engineering",
-       "list of scholarship",
-       "comps scholarship",
-       "IT scholarship",
-       "mechanical scholarship",
-       "civil scholarship",
-       "chemical scholarship",
-       "automobile scholarship",
-       "first year scholarship",
-       "second year scholarship",
-       "third year scholarship",
-       "fourth year scholarship"
-    ],
-    "responses": [
-       "Many government scholarships are supported by our university. For details and updates visit <a target=\"_blank\" href=\"(SCHOLARSHIP DETAILS LINK)\">here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "ScholarshipCriteria",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "facilities",
-    "text": [
-       "What facilities college provide",
-       "College facility",
-       "What are college facilities",
-       "facilities",
-       "facilities provided"
-    ],
-    "responses": [
-       "Our university's Engineering department provides fully AC Lab with internet connection, smart classroom, Auditorium, library,canteen"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Facilities",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "college intake",
-    "text": [
-       "max number of students",
-       "number of seats per branch",
-       "number of seats in each branch",
-       "maximum number of seats",
-       "maximum students intake",
-       "What is college intake",
-       "how many stundent are taken in each branch",
-       "seat allotment",
-       "seats"
-    ],
-    "responses": [
-       "For IT, Computer and extc 60 per branch and seat may be differ for different department."
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Intake",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "uniform",
-    "text": [
-       "college dress code",
-       "college dresscode",
-       "what is the uniform",
-       "can we wear casuals",
-       "Does college have an uniform",
-       "Is there any uniform",
-       "uniform",
-       "what about uniform",
-       "do we have to wear uniform"
-    ],
-    "responses": [
-       "ENTER YOUR OWN UNIVERSITY UNIFORM CIRCULER"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "UniformCollegeDressCode",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "committee",
-    "text": [
-       "what are the different committe in college",
-       "different committee in college",
-       "Are there any committee in college",
-       "Give me committee details",
-       "committee",
-       "how many committee are there in college"
-    ],
-    "responses": [
-       "For the various committe in college contact this number: ADD NUMBER"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Committee",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "random",
-    "text": [
-       "I love you",
-       "Will you marry me",
-       "Do you love me"
-    ],
-    "responses": [
-       "I am not program for this, please ask appropriate query"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Inappropriate",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "swear",
-    "text": [
-       "fuck",
-       "bitch",
-       "shut up",
-       "hell",
-       "stupid",
-       "idiot",
-       "dumb ass",
-       "asshole",
-       "fucker"
-    ],
-    "responses": [
-       "please use appropriate language",
-       "Maintaining decency would be appreciated"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "InappropriateSwearWords",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "vacation",
-    "text": [
-       "holidays",
-       "when will semester starts",
-       "when will semester end",
-       "when is the holidays",
-       "list of holidays",
-       "Holiday in these year",
-       "holiday list",
-       "about vacations",
-       "about holidays",
-       "When is vacation",
-       "When is holidays",
-       "how long will be the vacation"
-    ],
-    "responses": [
-       "Academic calender is given to you by your class-soordinators after you join your respective classes"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "AcademicCalendar",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "sports",
-    "text": [
-       "sports and games",
-       "give sports details",
-       "sports infrastructure",
-       "sports facilities",
-       "information about sports",
-       "Sports activities",
-       "please provide sports and games information"
-    ],
-    "responses": [
-       "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=/\"(LINK IF HAVE)\">here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Sports",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "salutaion",
-    "text": [
-       "okk",
-       "okie",
-       "nice work",
-       "well done",
-       "good job",
-       "thanks for the help",
-       "Thank You",
-       "its ok",
-       "Thanks",
-       "Good work",
-       "k",
-       "ok",
-       "okay"
-    ],
-    "responses": [
-       "I am glad I helped you",
-       "welcome, anything else i can assist you with?"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Salutation",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "task",
-    "text": [
-       "what can you do",
-       "what are the thing you can do",
-       "things you can do",
-       "what can u do for me",
-       "how u can help me",
-       "why i should use you"
-    ],
-    "responses": [
-       "I can answer to low-intermediate questions regarding college",
-       "You can ask me questions regarding college, and i will try to answer them"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Task",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "ragging",
-    "text": [
-       "ragging",
-       "is ragging practice active in college",
-       "does college have any antiragging facility",
-       "is there any ragging cases",
-       "is ragging done here",
-       "ragging against",
-       "antiragging facility",
-       "ragging juniors",
-       "ragging history",
-       "ragging incidents"
-    ],
-    "responses": [
-       "We are Proud to tell you that our college provides ragging free environment, and we have strict rules against ragging"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "Ragging",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- },
-  {
-    "intent": "hod",
-    "text": [
-       "hod",
-       "hod name",
-       "who is the hod"
-    ],
-    "responses": [
-       "HODs differ for each branch, please be more specific like: (HOD it)"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "HODName",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
-   },
-   {
-    "intent": "Mess Timetable",
-    "text": [
-       "Mess TimeTable",
-       "what is the Mess Table",
-       "Bus Timetable",
-       "timetable",
-       "what is the timetable",
-       "what is the bus timetable",
-       "Academic Calander"
-    ],
-    "responses": [
-       "Timetable Link visit <a target=\"_blank\" href=\"https://lightningmcqueen-95.github.io/collage/index.html\"> here</a>"
-    ],
-    "extension":  {
-        "function": "",
-        "entities": false,
-        "responses": []
-    },
-    "context":  {
-        "in": "",
-        "out": "MessQueries",
-        "clear": true
-    },
-    "entityType": "NA",
-    "entities": []
- }
- ]
- }
+         "intent": "greeting",
+         "text": [
+            "Hi",
+            "How are you?",
+            "Is anyone there?",
+            "Hello",
+            "Good day",
+            "What's up",
+            "how are ya",
+            "heyy",
+            "whatsup"
+         ],
+         "responses": [
+            "Hello! I am your CampusAI Assistant. How can I help you today?",
+            "Good to see you again! Feel free to ask me anything about MNU.",
+            "Hi there, how can I help you navigate Mama Ngina University?"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GreetingUserRequest",
+            "clear": false
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "about_mnu",
+         "text": [
+            "What is MNU?",
+            "Tell me about Mama Ngina University",
+            "Where is the university located?",
+            "history of mnu",
+            "Who is the mentor university?"
+         ],
+         "responses": [
+            "Mama Ngina University College (MNUC) is a constituent college of Kenyatta University, initially mentored by Moi University. It is located in Gatundu, Kiambu County."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AboutMNU",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "vision_mission",
+         "text": [
+            "What is the vision?",
+            "university mission",
+            "core values of mnu",
+            "What is the motto?",
+            "university philosophy"
+         ],
+         "responses": [
+            "Vision: A Premier University that nurtures Competent and Value-based leaders. Mission: To provide transformative teaching, research, and community engagement. Motto: Shaping the Future."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "VisionMission",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "contacts",
+         "text": [
+            "How do I contact MNU?",
+            "University phone number",
+            "Official email",
+            "admission office contact",
+            "registrar phone"
+         ],
+         "responses": [
+            "General Inquiry: 020-208-4004 or info@mnu.ac.ke. Admissions: admissions@mnu.ac.ke. Registrar (ASA): +254 748 868 921."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ContactRequest",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "fees",
+         "text": [
+            "information about fee",
+            "bank account details",
+            "Equity bank mnu",
+            "how much is school fees",
+            "fee structure"
+         ],
+         "responses": [
+            "Fees are payable to: Equity Bank (A/C: 0660282250603) or Co-operative Bank (A/C: 01129556920900). First-semester fee for new students is approx KES 34,700."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FeeStructure",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "admission_docs",
+         "text": [
+            "what documents do i need for registration?",
+            "joining instructions",
+            "admission letter",
+            "medical form",
+            "MNU/4 form"
+         ],
+         "responses": [
+            "Required: Original admission letter, original and copies of academic certificates, and National ID. A satisfactory Medical Report (Form MNU/4) is mandatory."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DocumentsForAdmission",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "academic_calendar",
+         "text": [
+            "When do we report?",
+            "semester dates 2025",
+            "matriculation date",
+            "When do exams start?",
+            "next semester start"
+         ],
+         "responses": [
+            "Semester 2 for 2026 begins with reporting on 6th January 2026. Lectures commence shortly after registration."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicCalendar",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "library",
+         "text": [
+            "library hours",
+            "is the library open on sunday?",
+            "library contact",
+            "past papers",
+            "e-resources",
+            "Where is the library?"
+         ],
+         "responses": [
+            "The library is open Mon-Fri (8am-6pm) and Sat (9am-6pm). Closed on Sundays. Access e-resources at library.mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LibraryHours",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "ict_support",
+         "text": [
+            "ict help",
+            "student email problem",
+            "how to set up 2fa",
+            "eduroam wifi",
+            "student portal issues",
+            "reset portal password"
+         ],
+         "responses": [
+            "Visit support.mnu.ac.ke for portal tickets or email ictsupport@mnu.ac.ke for email and 2FA issues. WiFi setup guides for Eduroam are on the support portal."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ICTSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "accommodation",
+         "text": [
+            "hostel facility",
+            "hostels near campus",
+            "Qwetu Kejani",
+            "where can i stay?",
+            "hostel fees"
+         ],
+         "responses": [
+            "MNU has an MOU with Qejani Hostels for safe student accommodation near campus. Students are responsible for their own meal arrangements."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HostelRelatedQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "clubs",
+         "text": [
+            "student clubs",
+            "list of societies",
+            "mentorship club",
+            "drama club",
+            "Christian union",
+            "Computer science club"
+         ],
+         "responses": [
+            "Active clubs include Mentorship, Drama, Computer Science, and spiritual groups like the Christian Union and Muslim Association."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ClubsAndSocieties",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "graduation",
+         "text": [
+            "graduation requirements",
+            "how to hire a gown",
+            "clearance form",
+            "returning academic regalia",
+            "graduation dates"
+         ],
+         "responses": [
+            "Graduands must fill the 'Academic Gowns Hiring Form'. Failure to return regalia on time incurs a KES 500 daily penalty."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GraduationQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "schools",
+         "text": [
+            "What schools are in MNU?",
+            "faculties available",
+            "departments",
+            "School of Health Sciences"
+         ],
+         "responses": [
+            "Schools include: 1. Business, Humanities and Economics, 2. Pure and Applied Sciences, and 3. Health Sciences."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AskingCourses",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "goodbye",
+         "text": [
+            "cya",
+            "see you",
+            "bye bye",
+            "Goodbye",
+            "Bye",
+            "gtg"
+         ],
+         "responses": [
+            "Goodbye! Have a great day at Mama Ngina University.",
+            "Talk to you later!",
+            "Come back soon!"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LeavingUserRequest",
+            "clear": false
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "student_aid",
+         "text": [
+            "student aid programme",
+            "financial hardship assistance",
+            "help with basic necessities",
+            "food and toiletries support",
+            "How to apply for student aid?"
+         ],
+         "responses": [
+            "The MNUC Student Aid Programme supports students facing personal or financial hardship with basic necessities like food, toiletries, and clothing. Apply by downloading the form from the Student Affairs website and submitting it to head-studentaffairs@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudentWelfare",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "exam_irregularities",
+         "text": [
+            "what is an exam offence?",
+            "cheating in exams",
+            "carrying a phone in exam room",
+            "plagiarism in exams",
+            "consequences of exam irregularities"
+         ],
+         "responses": [
+            "Serious offences include possession of unauthorized materials (phones, notes), plagiarism, and impersonation. Involvement in any examination irregularity automatically leads to expulsion from the University College."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ExamPolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "online_learning",
+         "text": [
+            "how to access LMS",
+            "online classes",
+            "ODeL learning",
+            "LMS student guide",
+            "KENET conference platform"
+         ],
+         "responses": [
+            "Students can access ODeL online classes via the Learning Management System (LMS). Detailed video and PDF guides for students are available on the main MNU website under Online Learning Resources."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DigitalLearning",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "disability_support",
+         "text": [
+            "services for PWDs",
+            "disability mainstreaming",
+            "accessibility on campus",
+            "extra time in exams for disability",
+            "mentorship for students with disabilities"
+         ],
+         "responses": [
+            "MNU is committed to inclusivity, providing ramps, tactile lifts, and accessible websites. Students with disabilities are allocated an extra 30 minutes in examinations and have access to mentorship services."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "InclusivitySupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "security_emergency",
+         "text": [
+            "security hotline",
+            "emergency number",
+            "What to do in an emergency?",
+            "security on campus",
+            "how to report a crime"
+         ],
+         "responses": [
+            "In case of emergency, contact the Security Hotline at +254 741 016 799 or email security@mnu.ac.ke. Emergency notifications are also broadcasted via the university website and student email."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "EmergencyContact",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "complaints_feedback",
+         "text": [
+            "how to file a complaint",
+            "feedback and compliments",
+            "complaints desk location",
+            "MNU feedback email"
+         ],
+         "responses": [
+            "Complaints and compliments can be submitted via email to feedback@mnu.ac.ke. Physically, you can visit the Administration Building, Room 207, to fill out the official form."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "UserFeedback",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "helb_loans",
+         "text": [
+            "HELB loan application",
+            "student loans in Kenya",
+            "how to apply for HELB",
+            "HELB products for students"
+         ],
+         "responses": [
+            "Students can apply for HELB loans and scholarships through the official HELB mobile app or website. For assistance, students can visit Huduma Centres or the HELB Student Service Centre."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FinancialAid",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "elections_conduct",
+         "text": [
+            "SAMNUC elections",
+            "voting rights at MNU",
+            "election offences",
+            "conduct during campaigns",
+            "student leadership elections"
+         ],
+         "responses": [
+            "SAMNUC elections are governed by a strict Electoral Code. Offences include use of abusive language, defacing posters, or enlisting goons. Breaching this code can lead to disqualification and disciplinary action by the University College Student Disciplinary Committee."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Governance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "careers_vacancies",
+         "text": [
+            "job opportunities at MNU",
+            "teaching vacancies",
+            "internal advertisements",
+            "how to apply for a job at the university",
+            "careers portal",
+            "work at Mama Ngina University"
+         ],
+         "responses": [
+            "All career opportunities and job vacancies are posted on the 'Vacancies' section of the official MNU website. Applications should typically be sent to the Office of the Principal or via vacancies@mnu.ac.ke as specified in the advertisement."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CareerQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "tenders_procurement",
+         "text": [
+            "tender notices",
+            "procurement opportunities",
+            "supply of goods and services",
+            "tender documents download",
+            "pre-qualification of suppliers"
+         ],
+         "responses": [
+            "Interested bidders can find active tender notices on the university website under the 'Tenders' tab. Completed documents are usually submitted to the tender box at the Administration Block or via tenders@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ProcurementInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "alumni_association",
+         "text": [
+            "MNU alumni association",
+            "how to join alumni",
+            "alumni benefits",
+            "networking for graduates",
+            "alumni office contact"
+         ],
+         "responses": [
+            "The MNU Alumni Association focuses on maintaining a lifelong connection between the university and its graduates. You can register as an alumnus upon graduation to access networking events and mentorship opportunities by contacting alumni@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AlumniRelations",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "counseling_mental_health",
+         "text": [
+            "counseling services",
+            "mental health support",
+            "where to get psychological help",
+            "depression and anxiety support",
+            "talk to a counselor"
+         ],
+         "responses": [
+            "The University provides confidential counseling services through the Office of the Dean of Students. Students can walk into the Student Affairs office or book an appointment via email for support with academic, social, or personal challenges."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "WellnessSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "transport_shuttle",
+         "text": [
+            "university bus schedule",
+            "transport services",
+            "shuttle to Gatundu town",
+            "transport for academic trips"
+         ],
+         "responses": [
+            "The university provides transport services for official academic trips and organized student events. Daily shuttle schedules for staff and students between the campus and Gatundu town are usually posted on the notice boards."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Logistics",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "student_conduct_rules",
+         "text": [
+            "university rules and regulations",
+            "student code of conduct",
+            "disciplinary procedures",
+            "rules on demonstrations",
+            "alcohol and drug policy"
+         ],
+         "responses": [
+            "Students are expected to adhere to the MNU Student Code of Conduct, which prohibits drug abuse, violence, and unauthorized demonstrations. Breaches are handled by the Student Disciplinary Committee and can lead to suspension or expulsion."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DisciplinePolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "research_publications",
+         "text": [
+            "university research papers",
+            "institutional repository",
+            "research policy",
+            "MNU journal",
+            "funding for research"
+         ],
+         "responses": [
+            "MNU promotes research through its Research, Innovation, and Outreach (RIO) office. Academic staff and students' research works are hosted on the MNU Institutional Repository (e-space) for global visibility."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ResearchInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "downloads_forms",
+         "text": [
+            "download application forms",
+            "inter-faculty transfer form",
+            "missing marks form",
+            "deferment form",
+            "clearance form download"
+         ],
+         "responses": [
+            "Commonly used forms such as the Admission Medical Form (MNU/4), Deferment forms, and Clearance forms are available for download in the 'Downloads' section of the university website."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AdministrativeForms",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "news_updates",
+         "text": [
+            "latest news from MNU",
+            "university announcements",
+            "upcoming events",
+            "press releases",
+            "what is happening on campus?"
+         ],
+         "responses": [
+            "Stay updated by checking the 'Latest News' and 'Announcements' sections on the university home page. Recent updates include ISO certification progress and professional academy launches."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CampusUpdates",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "governance_council",
+         "text": [
+            "who is the chancellor?",
+            "university council members",
+            "Who is the Chairman of the Council?",
+            "university management team",
+            "governance structure of mnu"
+         ],
+         "responses": [
+            "Mama Ngina University College is governed by a University Council chaired by Dr. Mutuku Matingi. The management is led by the Principal, Prof. Zipporah Ng'ang'a, supported by the Deputy Principal (ASA)."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GovernanceInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "environmental_policy",
+         "text": [
+            "environmental sustainability",
+            "is MNU green?",
+            "tree planting initiatives",
+            "waste management policy",
+            "climate change center"
+         ],
+         "responses": [
+            "MNU is committed to environmental sustainability through its 'Green Campus' initiative. This includes regular tree-planting events, sustainable waste management, and the establishment of the Center for Climate Change and Environmental Studies."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Sustainability",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "gender_mainstreaming",
+         "text": [
+            "gender policy",
+            "equality on campus",
+            "prevention of sexual harassment",
+            "gender desk location",
+            "support for female students"
+         ],
+         "responses": [
+            "MNU maintains a zero-tolerance policy towards sexual harassment and gender-based violence. The Gender Mainstreaming Committee ensures equal opportunities and provides a secure reporting mechanism via the Gender Desk in the Student Affairs office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "EqualityPolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "academic_partnerships",
+         "text": [
+            "KU mentorship",
+            "Kenyatta University link",
+            "university collaborations",
+            "industrial attachments link",
+            "MOU with other institutions"
+         ],
+         "responses": [
+            "As a constituent college of Kenyatta University (KU), MNU benefits from KU\u2019s academic mentorship and quality assurance frameworks. The university also maintains MOUs with various industrial partners for student attachments and internships."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Partnerships",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "performance_contracting",
+         "text": [
+            "service delivery charter",
+            "performance contract",
+            "university ranking",
+            "public service standards",
+            "citizen delivery charter"
+         ],
+         "responses": [
+            "MNU adheres to the Government of Kenya Performance Contracting guidelines to ensure efficiency. Our Service Delivery Charter, visible in all administrative blocks, outlines our commitment to timely and transparent service for all stakeholders."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Accountability",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "anti_corruption",
+         "text": [
+            "corruption reporting",
+            "anti-corruption committee",
+            "integrity at MNU",
+            "how to report bribery",
+            "ethics and transparency"
+         ],
+         "responses": [
+            "MNU has a dedicated Corruption Prevention Committee. You can report any unethical behavior or bribery anonymously through the corruption reporting boxes placed around campus or via integrity@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "EthicsInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "student_medical_insurance",
+         "text": [
+            "student insurance",
+            "NHIF for students",
+            "medical cover on campus",
+            "inpatient and outpatient student services"
+         ],
+         "responses": [
+            "All students are required to have a valid NHIF cover or an equivalent medical insurance. This ensures access to both inpatient services at recognized hospitals and outpatient care at the University Health Unit."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "MedicalInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "greeting",
+         "text": [
+            "Hi",
+            "How are you?",
+            "Is anyone there?",
+            "Hello",
+            "Good day",
+            "What's up",
+            "how are ya",
+            "heyy",
+            "whatsup",
+            "??? ??? ??"
+         ],
+         "responses": [
+            "Hello!",
+            "Good to see you again!",
+            "Hi there, how can I help?"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GreetingUserRequest",
+            "clear": false
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "goodbye",
+         "text": [
+            "cya",
+            "see you",
+            "bye bye",
+            "See you later",
+            "Goodbye",
+            "I am Leaving",
+            "Bye",
+            "Have a Good day",
+            "talk to you later",
+            "ttyl",
+            "i got to go",
+            "gtg"
+         ],
+         "responses": [
+            "Sad to see you go :(",
+            "Talk to you later",
+            "Goodbye!",
+            "Come back soon"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LeavingUserRequest",
+            "clear": false
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "creator",
+         "text": [
+            "what is the name of your developers",
+            "what is the name of your creators",
+            "what is the name of the developers",
+            "what is the name of the creators",
+            "who created you",
+            "your developers",
+            "your creators",
+            "who are your developers",
+            "developers",
+            "you are made by",
+            "you are made by whom",
+            "who created you",
+            "who create you",
+            "creators",
+            "who made you",
+            "who designed you"
+         ],
+         "responses": [
+            "Willy Mutunga"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AskingCreator",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "name",
+         "text": [
+            "name",
+            "your name",
+            "do you have a name",
+            "what are you called",
+            "what is your name",
+            "what should I call you",
+            "whats your name?",
+            "what are you",
+            "who are you",
+            "who is this",
+            "what am i chatting to",
+            "who am i taking to",
+            "what are you"
+         ],
+         "responses": [
+            "You can call me CampusAI.",
+            "I'm CampusAI",
+            "I am a Chatbot.",
+            "I am your helper"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AskingMyName",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "hours",
+         "text": [
+            "timing of university",
+            "what is university timing",
+            "working days",
+            "when are you guys open",
+            "what are your hours",
+            "hours of operation",
+            "when is the university open",
+            "university timing",
+            "what about university timing",
+            "is university open on saturday",
+            "tell something about university timing",
+            "what is the university  hours",
+            "when should i come to university",
+            "when should i attend university",
+            "what is my university time",
+            "university timing",
+            "timing university"
+         ],
+         "responses": [
+            "University is open 8am-5pm Monday-Friday!"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CollegeTimings",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "number",
+         "text": [
+            "more info",
+            "contact info",
+            "how to contact university",
+            "university telephone number",
+            "university number",
+            "What is your contact no",
+            "Contact number?",
+            "how to call you",
+            "University phone no?",
+            "how can i contact you",
+            "Can i get your phone number",
+            "how can i call you",
+            "phone number",
+            "phone no",
+            "call"
+         ],
+         "responses": [
+            "You can contact at: 0702125192"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ContactRequest",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "course",
+         "text": [
+            "list of courses",
+            "list of courses offered",
+            "list of courses offered in",
+            "what are the courses offered in your college?",
+            "courses?",
+            "courses offered",
+            "courses offered in the university",
+            "courses you offer",
+            "branches?",
+            "courses available at UNI?",
+            "branches available at your college?",
+            "what are the courses in UNI?",
+            "what are branches in UNI?",
+            "what are courses in UNI?",
+            "branches available in UNI?",
+            "can you tell me the courses available in UNI?",
+            "can you tell me the branches available in UNI?",
+            "computer science?",
+            "computer",
+            "Computer engineering?",
+            "it",
+            "IT",
+            "Information Technology",
+            "AI/Ml",
+            "Bsc Computer Science",
+            "Bsc Mathematics and Computer Science",
+            "Statistics and Programming",
+            "Economics and Finance",
+            "Bachelor of Commerce",
+            "Bsc Nursing",
+            "Counselling Psychology",
+            "Public Policy and Administratiom"
+         ],
+         "responses": [
+            "Our university offers Bsc Computer Science, Bsc Mathematics and Computer Science, Statistics and Programming, Economics and Finance, Bachelor of Commerce, Bsc Nursing, Counselling Psychology, Public Policy and Administratiom, etc.",
+            "View courses offered here <a target=\"_blank\" href=\"https://mnu.ac.ke/undergraduate-courses-2//\"> here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AskingCourses",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "fees",
+         "text": [
+            "information about fee",
+            "information on fee",
+            "tell me the fee",
+            "semester fee",
+            "fee per semester",
+            "what is the fee of each semester",
+            "what is the fees of each year",
+            "what is fee",
+            "what is the fees",
+            "how much is the fees",
+            "fees for first year",
+            "fees",
+            "about the fees",
+            "tell me something about the fees",
+            "What is the fees of hostel",
+            "how much is the fees",
+            "hostel fees"
+         ],
+         "responses": [
+            "For Fee detail visit the student finance office located at the main adminstration block, lower ground."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FeeStructure",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "location",
+         "text": [
+            "where is the university located",
+            "university is located at",
+            "where is university",
+            "where is university located",
+            "address of university",
+            "how to reach university",
+            "university location",
+            "university address",
+            "wheres the university",
+            "how can I reach university",
+            "whats is the university address",
+            "what is the address of university",
+            "address",
+            "location"
+         ],
+         "responses": [
+            "<a target=\"_blank\" href=\"https://maps.app.goo.gl/NDEnuWKBEAUJ7oyK9\"> here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         " context": {
+            "in": "",
+            "out": "AddressOfCollege",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "hostel",
+         "text": [
+            "hostel facility",
+            "hostel servive",
+            "hostel location",
+            "hostel address",
+            "hostel facilities",
+            "hostel fees",
+            "Does university provide hostel",
+            "Is there any hostel",
+            "Where is hostel",
+            "do you have hostel",
+            "do you guys have hostel",
+            "hostel",
+            "hostel capacity",
+            "what is the hostel fee",
+            "how to get in hostel",
+            "what is the hostel address",
+            "how far is hostel from university",
+            "hostel university distance",
+            "where is the hostel",
+            "how big is the hostel",
+            "distance between university and hostel",
+            "distance between hostel and university"
+         ],
+         "responses": [
+            "For hostel detail visit <a target=\"_blank\" href=\"https://studentportal.mnu.ac.ke/\"> here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HostelRelatedQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "event",
+         "text": [
+            "events organised",
+            "list of events",
+            "list of events organised in college",
+            "list of events conducted in college",
+            "What events are conducted in college",
+            "Are there any event held at college",
+            "Events?",
+            "functions",
+            "what are the events",
+            "tell me about events",
+            "what about events"
+         ],
+         "responses": [
+            "For event detail visit <a target=\"_blank\" href=\"https://mnu.ac.ke/wp-content/uploads/2025/08/Calender-Of-Activities-2025-2026-Academic.pdf\"> here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "EventRelatedQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "document",
+         "text": [
+            "document to bring",
+            "documents needed for admision",
+            "documents needed at the time of admission",
+            "documents needed during admission",
+            "documents required for admision",
+            "documents required at the time of admission",
+            "documents required during admission",
+            "What document are required for admission",
+            "Which document to bring for admission",
+            "documents",
+            "what documents do i need",
+            "what documents do I need for admission",
+            "documents needed"
+         ],
+         "responses": [
+            "To know more about documents required visit <a target=\"_blank\" href=\"https://admissions.mnu.ac.ke/\"> here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DocumentsForAdmission",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "floors",
+         "text": [
+            "size of campus",
+            "building size",
+            "How many floors does college have",
+            "floors in college",
+            "floors in college",
+            "floors"
+         ],
+         "responses": [
+            "My College has a modern lecture theatre, adminstration block and Tuition complex which give the best ambience for student studies. "
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FloorQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "syllabus",
+         "text": [
+            "Syllabus for IT",
+            "what is the Information Technology syllabus",
+            "syllabus",
+            "timetable",
+            "what is IT syllabus",
+            "syllabus",
+            "What is next lecture"
+         ],
+         "responses": [
+            "Timetable are provided to the students OR To know about syllabus visit your respective school for guidance"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SyllabusQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "library",
+         "text": [
+            "is there any library",
+            "library facility",
+            "library facilities",
+            "do you have library",
+            "does the college have library facility",
+            "college library",
+            "where can i get books",
+            "book facility",
+            "Where is library",
+            "Library",
+            "Library information",
+            "Library books information",
+            "Tell me about library",
+            "how many libraries"
+         ],
+         "responses": [
+            "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"https://library.mnu.ac.ke/\">here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LibraryHours",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "infrastructure",
+         "text": [
+            "how is college infrastructure",
+            "infrastructure",
+            "college infrastructure"
+         ],
+         "responses": [
+            "Our University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Infra",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "canteen",
+         "text": [
+            "food facilities",
+            "canteen facilities",
+            "canteen facility",
+            "is there any canteen",
+            "Is there a cafetaria in college",
+            "Does college have canteen",
+            "Where is canteen",
+            "where is cafetaria",
+            "canteen",
+            "Food",
+            "Cafetaria"
+         ],
+         "responses": [
+            "Our university has canteen with variety of food available"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         " context": {
+            "in": "",
+            "out": "Snacking",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "menu",
+         "text": [
+            "food menu",
+            "food in canteen",
+            "Whats there on menu",
+            "what is available in college canteen",
+            "what foods can we get in college canteen",
+            "food variety",
+            "What is there to eat?"
+         ],
+         "responses": [
+            "The canteens at the university have a variety of food available. Please visit the canteens to get more info"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Menu",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "procurement",
+         "text": [
+            "What is university procurement",
+            "What is average package",
+            "companies visit",
+            "package",
+            "About procurement",
+            "procurement",
+            "recruitment",
+            "companies"
+         ],
+         "responses": [
+            "To know about procurement visit <a target=\"_blank\" href=\"https://procurement.mnu.ac.ke/\">here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Placements",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "Dean SHS",
+         "text": [
+            "Who is Dean SHS",
+            "Where is Dean SHS",
+            "Dean SHS",
+            "name of Dean SHS"
+         ],
+         "responses": [
+            "Dr Ruth Mbugua is the Dean of School of Health Sciences"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HODs",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "computerhod",
+         "text": [
+            "Who is computing COD",
+            "Where is computing COD",
+            "computing COD",
+            "name of computing COD"
+         ],
+         "responses": [
+            "Dr Elijah Maseno is the COD of Computing Information Technology department."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ComputerHOD",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "COD",
+         "text": [
+            "Who is COD",
+            "Where is COD",
+            "COD",
+            "name of COD"
+         ],
+         "responses": [
+            "COD is the name of the chair of a department. You can reach out to your respective school for any queries or concerns."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DiffHODs",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "principal",
+         "text": [
+            "what is the name of principal",
+            "whatv is the principal name",
+            "principal name",
+            "Who is college principal",
+            "Where is principal's office",
+            "principal",
+            "name of principal"
+         ],
+         "responses": [
+            "Prof Zipporah Ng'ang'a is the university college principal and if you need any help then you can reach out the Head Student Affairs first."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CollegePrincipal",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "sem",
+         "text": [
+            "exam dates",
+            "exam schedule",
+            "When is semester exam",
+            "Semester exam timetable",
+            "sem",
+            "semester",
+            "exam",
+            "when is exam",
+            "exam timetable",
+            "exam dates",
+            "when is semester"
+         ],
+         "responses": [
+            "Students will be notified the relevant university details via the student corporate emails. Keep an eye at your emails not to miss important information."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicCalendar",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "admission",
+         "text": [
+            "what is the process of admission",
+            "what is the admission process",
+            "How to take admission in your college",
+            "What is the process for admission",
+            "admission",
+            "admission process"
+         ],
+         "responses": [
+            "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"https://admissions.mnu.ac.ke/\">website</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ProcessOfAdmission",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "scholarship",
+         "text": [
+            "scholarship",
+            "Is scholarship available",
+            "scholarship nursing",
+            "scholarship it",
+            "scholarship computer science",
+            "scholarship counselling psychology",
+            "scholarship public policy",
+            "scholarship maths and computer science",
+            "scholarship for AI/ML",
+            "available scholarships",
+            "scholarship for computer",
+            "scholarship for it",
+            "scholarship for statistics",
+            "scholarship for bcom",
+            "scholarship for economics",
+            "list of scholarship"
+         ],
+         "responses": [
+            "Many government scholarships are supported by our university. For details and updates visit the relevant pages like HELB to get details on scholarships"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ScholarshipCriteria",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "facilities",
+         "text": [
+            "What facilities college provide",
+            "College facility",
+            "What are college facilities",
+            "facilities",
+            "facilities provided"
+         ],
+         "responses": [
+            "Our university's Computing department provides fully Computer Labs with internet connection, smart classroom, Auditorium, library,canteen"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Facilities",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "password recovery",
+         "text": [
+            "Forgot password",
+            "Forgot my password",
+            "How to recover my password",
+            "password recovery",
+            "password reset"
+         ],
+         "responses": [
+            "To reset your email password please submit a ticket to the ICT department through <a target=\"_blank\" href=\"https://support.mnu.ac.ke/here\">https://support.mnu.ac.ke/here</a>"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Facilities",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "uniform",
+         "text": [
+            "college dress code",
+            "college dresscode",
+            "what is the uniform",
+            "can we wear casuals",
+            "Does college have an uniform",
+            "Is there any uniform",
+            "uniform",
+            "what about uniform",
+            "do we have to wear uniform"
+         ],
+         "responses": [
+            "Students are encouraged to dress decently to ensure a healthy environment while in class"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "UniformCollegeDressCode",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "swear",
+         "text": [
+            "fuck",
+            "bitch",
+            "shut up",
+            "hell",
+            "stupid",
+            "idiot",
+            "dumb ass",
+            "asshole",
+            "fucker"
+         ],
+         "responses": [
+            "please use appropriate language",
+            "Maintaining decency would be appreciated"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "InappropriateSwearWords",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "vacation",
+         "text": [
+            "holidays",
+            "when will semester starts",
+            "when will semester end",
+            "when is the holidays",
+            "list of holidays",
+            "Holiday in these year",
+            "holiday list",
+            "about vacations",
+            "about holidays",
+            "When is vacation",
+            "When is holidays",
+            "how long will be the vacation"
+         ],
+         "responses": [
+            "Academic calender is given to you by your class-soordinators after you join your respective classes"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicCalendar",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "sports",
+         "text": [
+            "sports and games",
+            "give sports details",
+            "sports infrastructure",
+            "sports facilities",
+            "information about sports",
+            "Sports activities",
+            "please provide sports and games information"
+         ],
+         "responses": [
+            "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit the sports office at the lecture theatre"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Sports",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "salutaion",
+         "text": [
+            "okk",
+            "okie",
+            "nice work",
+            "well done",
+            "good job",
+            "thanks for the help",
+            "Thank You",
+            "its ok",
+            "Thanks",
+            "Good work",
+            "k",
+            "ok",
+            "okay"
+         ],
+         "responses": [
+            "I am glad I helped you",
+            "welcome, anything else i can assist you with?"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Salutation",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "task",
+         "text": [
+            "what can you do",
+            "what are the thing you can do",
+            "things you can do",
+            "what can u do for me",
+            "how u can help me",
+            "why i should use you"
+         ],
+         "responses": [
+            "I can answer to low-intermediate questions regarding college",
+            "You can ask me questions regarding college, and i will try to answer them"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Task",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "dean",
+         "text": [
+            "dean",
+            "dean name",
+            "who is the dean"
+         ],
+         "responses": [
+            "Deans differ for each branch, please be more specific like: (dean SPAS, SBEH, SHS)"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HODName",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "incomplete_grades",
+         "text": [
+            "what is an 'I' grade?",
+            "how to clear an incomplete",
+            "missing marks in my transcript",
+            "not seeing a grade for a unit I sat for",
+            "incomplete grade policy"
+         ],
+         "responses": [
+            "An 'I' (Incomplete) means a grade wasn't finalized. You must fill out a Missing Marks form at the Registrar (ASA) office to have it cleared before the next semester.",
+            "Don't ignore missing marks! Contact your lecturer or the HOD immediately to ensure your scripts are verified and the correct grade is uploaded to the portal."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "IncompleteQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "deans_list",
+         "text": [
+            "how to get on the Dean's List",
+            "academic excellence awards",
+            "benefits of a high GPA",
+            "being recognized for top performance",
+            "what is the cut-off for honors?"
+         ],
+         "responses": [
+            "Academic excellence is celebrated! To make the Dean's List, you typically need a semester GPA of 3.7 or higher. This recognition is a great addition to your CV.",
+            "Students with exceptional performance are often eligible for internal scholarships or mentorship opportunities. Keep aiming for that First Class!."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HonorsQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "credit_transfers",
+         "text": [
+            "transferring credits from another uni",
+            "exemption for diploma holders",
+            "moving my units to a different degree",
+            "can I skip some units if I have a certificate?",
+            "credit waiver policy"
+         ],
+         "responses": [
+            "Credit transfers are possible for students coming from recognized institutions. You must apply through the Registrar (ASA) with your official transcripts for evaluation.",
+            "Diploma holders may be eligible for exemptions in specific first-year units. Submit your application early in the semester to the Admissions office for processing."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "TransferQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "graduation_audit",
+         "text": [
+            "am I ready to graduate?",
+            "how to check if I cleared all units",
+            "graduation eligibility check",
+            "missing units for graduation",
+            "transcript verification for final years"
+         ],
+         "responses": [
+            "A graduation audit ensures you've met all requirements. Visit the Registrar (ASA) office during your final year to verify your transcript and clear any pending issues.",
+            "Ensure you have no 'F' grades or 'I' grades in your record. You must also have met the minimum number of credit hours for your specific degree program."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GraduationAudit",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "grade_appeals",
+         "text": [
+            "how to appeal a grade",
+            "requesting a remark of an exam",
+            "I am unhappy with my results",
+            "disputing a lecturer's grade",
+            "re-evaluation process"
+         ],
+         "responses": [
+            "You have a right to appeal if you believe a grade is incorrect. This involves a formal application to the Registrar (ASA) and paying a prescribed remarking fee.",
+            "Appeals must be done within a specific timeframe after results are released. Talk to your HOD first to see if the issue can be resolved departmentally."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AppealQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "time_management",
+         "text": [
+            "how to create a study timetable",
+            "avoiding procrastination",
+            "balancing work and school",
+            "managing my time effectively",
+            "too many assignments at once"
+         ],
+         "responses": [
+            "Effective time management is a skill! Use a planner to track deadlines and try the Eisenhower Matrix to prioritize tasks. You can also get tips from the Mentorship Club.",
+            "Start assignments early to avoid last-minute stress. Break large projects into smaller tasks and set specific goals for each study session."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "TimeManagement",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "note_taking_methods",
+         "text": [
+            "how to take better notes",
+            "Cornell note taking system",
+            "best way to summarize lectures",
+            "digital vs paper notes",
+            "mind mapping for studies"
+         ],
+         "responses": [
+            "Try the Cornell Method: divide your page into notes, cues, and a summary. This makes reviewing much faster! Check the library for study skills resources.",
+            "Visual learners often benefit from mind mapping. Use different colors to link concepts. Experiment with both digital tools and traditional notebooks to see what fits you best."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudySkills",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "research_skills",
+         "text": [
+            "how to find academic sources",
+            "using Google Scholar for assignments",
+            "how to search the library catalog",
+            "finding peer-reviewed journals",
+            "library databases for computer science"
+         ],
+         "responses": [
+            "The MNU Library provides access to various e-resources. Visit library.mnu.ac.ke to use the OPAC (Online Public Access Catalog) and search for specific journals.",
+            "For credible research, always look for peer-reviewed articles. The library staff offers training on information literacy to help you master these tools."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ResearchSkills",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "presentation_tips",
+         "text": [
+            "how to give a good presentation",
+            "fear of public speaking",
+            "creating effective PowerPoint slides",
+            "how to present my project",
+            "group presentation tips"
+         ],
+         "responses": [
+            "Confidence comes with practice! Keep your slides simple\u2014use more visuals and less text. Join the Drama Club to practice your public speaking skills in a safe environment.",
+            "Engage your audience by making eye contact and asking questions. If you're nervous, try practicing in front of a mirror or with a small group of friends first."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "PresentationSkills",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "plagiarism_prevention",
+         "text": [
+            "how to avoid plagiarism",
+            "what is academic integrity?",
+            "citing sources correctly",
+            "APA vs MLA referencing",
+            "is using AI cheating?"
+         ],
+         "responses": [
+            "Academic integrity is non-negotiable. Always cite your sources! The university uses specific referencing styles like APA. Plagiarism can lead to expulsion.",
+            "Using AI to generate entire assignments is considered an exam offence. Use it only for brainstorming or research, and always acknowledge its use as per your department's guidelines."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicIntegrity",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "sleep_hygiene",
+         "text": [
+            "I can't sleep",
+            "insomnia due to stress",
+            "trouble sleeping before exams",
+            "how to improve my sleep",
+            "always feeling tired"
+         ],
+         "responses": [
+            "Sleep is vital for cognitive function. Try to maintain a consistent sleep schedule and avoid screens 30 minutes before bed. If your insomnia is linked to persistent anxiety, please visit the University Health Unit for a check-up.",
+            "Chronic tiredness can affect your grades. Speak to a counselor at the Student Affairs office to discuss stress management techniques that can help improve your rest."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SleepSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "student_id_issuance",
+         "text": [
+            "how to get a student ID",
+            "first year ID card process",
+            "where to take ID photos",
+            "ID card collection",
+            "student identification card"
+         ],
+         "responses": [
+            "New students are issued ID cards upon completion of registration. You must have your original admission letter and provide four 1-inch studio-quality photos to the Admissions Office for processing."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "IDIssuance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "lost_found",
+         "text": [
+            "I lost my bag",
+            "lost and found office",
+            "reporting a lost item",
+            "where to find lost keys",
+            "missing phone on campus"
+         ],
+         "responses": [
+            "All lost and found items should be reported or handed over to the University Security Office located at the main gate or the Student Affairs office. Please carry your student ID for verification when claiming an item."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SecurityQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "deferment_procedure",
+         "text": [
+            "how to defer my studies",
+            "taking a break from school",
+            "postponing a semester",
+            "deferment form",
+            "leave of absence"
+         ],
+         "responses": [
+            "To defer your studies, you must fill out a 'Request for Deferment' form available at the Registrar (ASA) office. Deferment is typically granted for one academic year and must be approved before the semester exams begin."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicStatus",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "attachment_requirements",
+         "text": [
+            "industrial attachment info",
+            "when do we go for attachment?",
+            "attachment logbook",
+            "personal accident insurance for attachment",
+            "attachment assessment"
+         ],
+         "responses": [
+            "Industrial attachment is mandatory for 3rd or 4th-year students depending on the program. You must secure a Personal Accident Insurance cover, obtain a logbook from your department, and ensure your site is approved by the university coordinator."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CareerDevelopment",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "unit_registration",
+         "text": [
+            "how to register for units",
+            "portal unit registration",
+            "adding or dropping a unit",
+            "unit registration deadline",
+            "portal not showing my units"
+         ],
+         "responses": [
+            "Unit registration is done online via the Student Portal at the start of every semester. Ensure you register for all core and elective units as per your course structure before the portal closes, usually in the second week of the semester."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "PortalActions",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "library_fines_policy",
+         "text": [
+            "late book return fee",
+            "what happens if I lose a library book?",
+            "library penalties",
+            "clearing library fines",
+            "overdue books"
+         ],
+         "responses": [
+            "Late returns attract a daily fine of KES 5 per book. If a book is lost, the student is required to pay three times the current market value of the book plus a processing fee. All fines must be cleared before the end of the semester."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LibraryPolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "student_mentorship_program",
+         "text": [
+            "who is my mentor?",
+            "academic advising",
+            "mentorship club info",
+            "talking to a lecturer about my career",
+            "mentorship for new students"
+         ],
+         "responses": [
+            "Every student is assigned an academic mentor within their department. You can also join the MNU Mentorship Club, which facilitates peer-to-peer and professional mentorship programs throughout the semester."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudentSuccess",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "exam_card_issuance",
+         "text": [
+            "how to get an exam card",
+            "printing my exam permit",
+            "portal exam card download",
+            "clearing fees for exam card",
+            "lost exam card"
+         ],
+         "responses": [
+            "Exam cards are generated via the Student Portal once a student has cleared at least 100% of their tuition fees and registered for all units. You must print and have the card stamped at the Finance and Registrar's offices before the exam period starts."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ExamLogistics",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "transcript_application",
+         "text": [
+            "how to get my transcript",
+            "official vs unofficial transcript",
+            "transcript for job application",
+            "results slip collection",
+            "requesting academic records"
+         ],
+         "responses": [
+            "Unofficial transcripts can be viewed and downloaded directly from the Student Portal. For an Official Transcript (with the university seal), you must apply through the Registrar (ASA) office and pay the requisite processing fee."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicRecords",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "internal_course_transfer",
+         "text": [
+            "change my degree",
+            "switch from IT to CS",
+            "internal transfer process",
+            "how to change courses",
+            "inter-faculty transfer"
+         ],
+         "responses": [
+            "Internal transfers are processed in the first two weeks of the first semester. You must meet the cluster points for the new program and apply through the Registrar (ASA) using the Inter-Faculty Transfer Form."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicStatus",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "special_exams",
+         "text": [
+            "what is a special exam?",
+            "missing exams due to sickness",
+            "applying for special examinations",
+            "special paper requirements"
+         ],
+         "responses": [
+            "Special exams are granted to students who miss regular exams due to medical reasons or other compassionate grounds. You must provide supporting evidence (e.g., a medical report) to the Registrar (ASA) within 48 hours."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ExamPolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "helb_application",
+         "text": [
+            "how to apply for HELB",
+            "HELB loan for first years",
+            "HELB deadline",
+            "student loan status",
+            "M-Pesa HELB payment"
+         ],
+         "responses": [
+            "Apply for HELB via the official HELB mobile app or website. Ensure you have a valid KRA PIN, National ID, and your parents' details ready for the application."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FinancialAid",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "work_study_program",
+         "text": [
+            "student jobs on campus",
+            "work study opportunities",
+            "working in the library",
+            "how to apply for work study"
+         ],
+         "responses": [
+            "The Work-Study Program supports students with financial needs by providing part-time jobs in the library or administrative offices. Applications are handled by the Dean of Students' office at the start of the semester."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudentWelfare",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "wifi_eduroam",
+         "text": [
+            "how to connect to eduroam",
+            "campus wifi password",
+            "wifi configuration for students",
+            "eduroam login issues"
+         ],
+         "responses": [
+            "To connect to 'Eduroam' WiFi, use your university corporate email as the username and your portal password. Detailed configuration guides for Android and Windows are available on the support portal."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ICTSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "lms_access",
+         "text": [
+            "how to log into LMS",
+            "online class portal",
+            "LMS password reset",
+            "accessing course materials online"
+         ],
+         "responses": [
+            "The Learning Management System (LMS) can be accessed via lms.mnu.ac.ke. Use your Admission Number and the password provided during orientation to log in and access course materials."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "DigitalLearning",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "smart_card_id",
+         "text": [
+            "biometric registration",
+            "smart card ID collection",
+            "lost smart card",
+            "student card activation"
+         ],
+         "responses": [
+            "MNU uses a smart card for library access and exams. If your card is lost, report it to the ICT office and pay the replacement fee at the Finance office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "IDIssuance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "sports_recreation",
+         "text": [
+            "sports activities",
+            "joining the darts team",
+            "football training",
+            "university games",
+            "KUSF tournaments"
+         ],
+         "responses": [
+            "MNU has active teams for Football, Darts, Athletics, and Indoor Games. Darts is particularly competitive in KUSF games. Visit the Sports Coordinator at the Dean of Students' office to join."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Sports",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "spiritual_welfare",
+         "text": [
+            "Christian Union meetings",
+            "Muslim association",
+            "SDA church on campus",
+            "Catholic student services"
+         ],
+         "responses": [
+            "Spiritual groups include the Christian Union (CU), Muslim Association, SDA Association, and Catholic Students Association. They meet regularly in designated halls during non-lecture hours."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudentLife",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "gender_desk",
+         "text": [
+            "reporting harassment",
+            "gender based violence support",
+            "gender desk location",
+            "safety for female students"
+         ],
+         "responses": [
+            "MNU has a zero-tolerance policy for harassment. You can report incidents to the Gender Desk in the Student Affairs office or via the confidential email: integrity@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "EqualityPolicy",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "peer_counseling",
+         "text": [
+            "student counselors",
+            "talking to a peer",
+            "mental health clubs",
+            "peer mentorship for stress"
+         ],
+         "responses": [
+            "The Mentorship Club facilitates peer counseling and mentorship. For professional support, visit the university counselor at the Student Affairs office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "WellnessSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "stress_management",
+         "text": [
+            "feeling burnt out",
+            "managing school pressure",
+            "stress relief tips",
+            "handling academic workload"
+         ],
+         "responses": [
+            "Manage stress by breaking assignments into smaller tasks, taking regular breaks, and attending mentorship sessions. If pressure persists, please consult the university health unit."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "WellnessSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "plagiarism_prevention",
+         "text": [
+            "what is turnitin?",
+            "academic cheating policy",
+            "citing academic work",
+            "avoiding plagiarism in reports"
+         ],
+         "responses": [
+            "Academic integrity is strictly enforced. Always cite your sources using APA format. Plagiarism or using unauthorized materials in exams can lead to immediate expulsion."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicIntegrity",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "graduation_gown",
+         "text": [
+            "hiring graduation regalia",
+            "graduation gown fee",
+            "returning the academic gown",
+            "gown hiring form"
+         ],
+         "responses": [
+            "Graduands must fill out the 'Academic Gowns Hiring Form' before collection. Regalia must be returned by the specified date to avoid a daily penalty of KES 500."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GraduationQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "alumni_association",
+         "text": [
+            "how to join alumni",
+            "alumni benefits",
+            "graduate networking",
+            "alumni office email"
+         ],
+         "responses": [
+            "Register with the MNU Alumni Association upon graduation to network with professionals and give back to the institution. Contact: alumni@mnu.ac.ke."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AlumniRelations",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "security_alert",
+         "text": [
+            "report a suspicious activity",
+            "security on campus",
+            "emergency hotline",
+            "security office location"
+         ],
+         "responses": [
+            "Report security issues to the main gate or call the Hotline: +254 741 016 799. Always carry your student ID for identification by security personnel."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SecurityQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "health_unit",
+         "text": [
+            "medical help on campus",
+            "health clinic location",
+            "emergency nurse",
+            "university health services"
+         ],
+         "responses": [
+            "The University Health Unit provides outpatient services for basic ailments. In case of serious medical emergencies, students are referred to the nearby Gatundu Level 5 Hospital."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "MedicalInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "catering_services",
+         "text": [
+            "university mess menu",
+            "canteen opening hours",
+            "food on campus",
+            "where to eat at MNU"
+         ],
+         "responses": [
+            "The university canteen offers a variety of affordable meals. Students can pay for meals using cash or mobile money directly at the catering unit."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudentLife",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "hostel_check_out",
+         "text": [
+            "how to check out of hostels",
+            "clearing from room",
+            "hostel clearance form",
+            "returning room keys"
+         ],
+         "responses": [
+            "To check out, ensure the room is clean, return all keys to the housekeeper, and sign the official clearance form to avoid extra charges."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "HostelRelatedQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "samnuc_elections",
+         "text": [
+            "student leadership elections",
+            "how to join SAMNUC",
+            "voting for student leaders",
+            "election code of conduct"
+         ],
+         "responses": [
+            "SAMNUC elections are held annually under a strict code of conduct. Aspiring leaders must be in good academic standing and vetted by the electoral committee."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Governance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "inter_faculty_transfer",
+         "text": [
+            "change my course",
+            "switch from IT to Computer Science",
+            "course transfer requirements",
+            "moving to another faculty"
+         ],
+         "responses": [
+            "Inter-faculty transfers are usually processed within the first two weeks of the first semester for new students. You must meet the cluster points for the new program and apply through the Registrar (ASA) office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicChange",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "missing_marks",
+         "text": [
+            "I can't see my marks",
+            "missing results on portal",
+            "how to report missing marks",
+            "grade not showing"
+         ],
+         "responses": [
+            "For missing marks, you should fill out a 'Missing Marks Form' at your department or the Registrar (ASA) office. Ensure you have proof of sitting for the exam, such as a signed attendance list or an exam card."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GradeIssues",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "academic_probation",
+         "text": [
+            "what is academic probation?",
+            "failing too many units",
+            "minimum GPA to stay in school",
+            "being discontinued"
+         ],
+         "responses": [
+            "A student is placed on academic probation if their GPA falls below the university's minimum threshold (usually 2.0). If you are on probation, please visit the Dean of Students for academic advising and support."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicStatus",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "deferment_procedure",
+         "text": [
+            "how to defer a semester",
+            "taking a break from school",
+            "postponing my studies",
+            "deferment form"
+         ],
+         "responses": [
+            "To defer, you must submit a formal application to the Registrar (ASA) explaining your reasons. Deferment is typically granted for one academic year, and you must clear any outstanding fees before the request is approved."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AcademicStatus",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "retake_policy",
+         "text": [
+            "how to register for a retake",
+            "failed unit retake",
+            "cost of a retake",
+            "repeating a unit"
+         ],
+         "responses": [
+            "Retakes for failed units are registered during the normal unit registration period in the semester the unit is offered. A prescribed retake fee per unit is usually applicable at the finance office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "RetakeQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "attachment_logbook",
+         "text": [
+            "where to get attachment logbook",
+            "industrial attachment marks",
+            "internship assessment",
+            "attachment insurance"
+         ],
+         "responses": [
+            "Attachment logbooks are collected from your respective department office. Ensure you have a valid Personal Accident Insurance cover before starting your industrial attachment."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "CareerSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "bursary_applications",
+         "text": [
+            "how to apply for university bursary",
+            "CDF bursary help",
+            "financial aid for needy students",
+            "scholarship opportunities"
+         ],
+         "responses": [
+            "The university offers limited bursaries for extremely needy students. Applications are announced via the Dean of Students' office. You can also apply for CDF or County bursaries using your fee statement as proof of registration."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "FinancialAid",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "nhif_student_cover",
+         "text": [
+            "NHIF for students",
+            "medical insurance at school",
+            "how to use NHIF at the health unit",
+            "student health cover"
+         ],
+         "responses": [
+            "All students are required to have a valid NHIF cover. You can use your NHIF card at the University Health Unit or other accredited facilities for inpatient and outpatient services."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "MedicalInfo",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "burnout_mental_health",
+         "text": [
+            "I feel burnt out",
+            "too much school work stress",
+            "mental exhaustion",
+            "I want to give up",
+            "feeling overwhelmed"
+         ],
+         "responses": [
+            "Academic pressure can be overwhelming. Please take a break and speak to a counselor at the Student Affairs office. Your mental health is more important than any grade. You are not alone!"
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "WellnessSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "procrastination_help",
+         "text": [
+            "I am procrastinating",
+            "how to stop being lazy",
+            "improving study habits",
+            "tips for finishing assignments"
+         ],
+         "responses": [
+            "Procrastination often comes from feeling overwhelmed. Try the Pomodoro technique: study for 25 minutes, then take a 5-minute break. Setting small, achievable goals each day can help you build momentum."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "StudyTips",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "gender_desk_safety",
+         "text": [
+            "reporting harassment",
+            "sexual harassment help",
+            "gender desk location",
+            "safety on campus for women"
+         ],
+         "responses": [
+            "The university has a zero-tolerance policy for any form of harassment. Reports can be made confidentially at the Gender Desk in the Student Affairs office or to the university security office."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SafetyQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "ict_ticketing",
+         "text": [
+            "report portal problem",
+            "ICT support ticket",
+            "wifi not working help",
+            "email account locked"
+         ],
+         "responses": [
+            "For ICT issues, you can raise a support ticket at the ICT helpdesk portal or visit the ICT office in the administration block for physical assistance."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "ICTSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "library_eresources",
+         "text": [
+            "how to access e-books",
+            "library online journals",
+            "off-campus library access",
+            "research databases"
+         ],
+         "responses": [
+            "You can access e-resources via the library portal using your university email credentials. This includes access to journals, e-books, and research databases like IEEE or JSTOR."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "LibraryHours",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "lost_student_id",
+         "text": [
+            "I lost my school ID",
+            "replacement for student card",
+            "cost of a new student ID",
+            "reporting a lost ID card"
+         ],
+         "responses": [
+            "If you lose your ID, report to the security office and the registrar. You will need to pay a replacement fee at the finance office and provide the receipt to the ICT office for a new card."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "IDIssuance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "samnuc_governance",
+         "text": [
+            "what is SAMNUC?",
+            "student leadership",
+            "how to join student council",
+            "who are the student leaders?"
+         ],
+         "responses": [
+            "SAMNUC is the Student Association representing your interests. Elections are held annually. You can participate by voting or running for a position if you meet the academic and disciplinary requirements."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "Governance",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "university_anthem_motto",
+         "text": [
+            "what is the school motto?",
+            "university anthem lyrics",
+            "philosophy of the school"
+         ],
+         "responses": [
+            "The university motto is 'Shaping the Future.' The anthem is played at official ceremonies and reflects our commitment to excellence and transformation."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "InstitutionalIdentity",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "lost_and_found",
+         "text": [
+            "I lost my phone on campus",
+            "found a set of keys",
+            "lost and found office",
+            "where to report missing items"
+         ],
+         "responses": [
+            "Lost items are usually turned in to the main security office or the Dean of Students' office. Please check there if you have lost or found something."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SecurityQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "clubs_and_societies",
+         "text": [
+            "list of clubs",
+            "how to join a society",
+            "drama club",
+            "IT club",
+            "Christian Union"
+         ],
+         "responses": [
+            "There are various clubs including the IT club, Drama club, and spiritual groups like the Christian Union. You can register for any club during the clubs' fair at the start of the semester."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SocialLife",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "gown_hiring",
+         "text": [
+            "how to hire a graduation gown",
+            "graduation regalia cost",
+            "returning the gown",
+            "gown collection dates"
+         ],
+         "responses": [
+            "Graduation gowns are hired after paying the graduation fee. Collection and return dates are announced by the Registrar (ASA) shortly before the graduation ceremony."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GraduationQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "alumni_network",
+         "text": [
+            "joining alumni association",
+            "benefits for graduates",
+            "alumni office",
+            "graduation transcript"
+         ],
+         "responses": [
+            "After graduation, you become part of the Alumni Association. This network helps you stay connected with the university and provides networking opportunities for your career."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AlumniRelations",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "university_symbols",
+         "text": [
+            "university anthem",
+            "MNU logo meaning",
+            "university colors",
+            "what is the university song?",
+            "mace meaning"
+         ],
+         "responses": [
+            "The University Anthem is sung at all official ceremonies and reflects our motto, 'Shaping the Future'. The logo features symbols of knowledge and progress, while our official colors represent Diligence, Excellence, and Integrity."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "InstitutionalIdentity",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "grief_and_loss",
+         "text": [
+            "I lost a family member",
+            "dealing with bereavement",
+            "death of a loved one",
+            "how to cope with loss while in school",
+            "I need time off for a funeral"
+         ],
+         "responses": [
+            "We are deeply sorry for your loss. Please reach out to the Dean of Students to discuss compassionate leave and access grief counseling. Taking care of your mental health during this time is the priority.",
+            "Bereavement is a heavy burden. The university offers psychological support to help you navigate this difficult period. Contact the Student Affairs office to book an appointment with a counselor."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "GriefSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "homesickness",
+         "text": [
+            "I miss my family",
+            "wanting to go home",
+            "struggling with being away from home",
+            "first time away from my parents",
+            "feeling lonely in Gatundu"
+         ],
+         "responses": [
+            "It's completely normal to miss home, especially in your first year. Try to stay connected with family via calls, but also engage in campus activities like the Mentorship Club to build a new community here.",
+            "Adjusting to a new environment takes time. Visit the Student Affairs office for tips on managing the transition, or join a student society to meet others who are in the same boat."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "AdjustmentSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "relationship_conflict",
+         "text": [
+            "problems with my roommate",
+            "how to handle a breakup",
+            "toxic friendships",
+            "conflict with a classmate",
+            "roommate agreement help"
+         ],
+         "responses": [
+            "Interpersonal conflicts can be distracting. If you're having trouble with a roommate, try a calm conversation first. If it persists, the Dean of Students' office can assist with mediation.",
+            "Navigating relationships is part of growth. If a breakup or friendship conflict is affecting your studies, our counselors are available for confidential support."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "SocialConflict",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "academic_burnout",
+         "text": [
+            "I feel exhausted with school",
+            "losing interest in my degree",
+            "I want to drop out",
+            "mental exhaustion from studies",
+            "cannot focus on lectures anymore"
+         ],
+         "responses": [
+            "Burnout is a sign you need a break. Consider talking to your academic advisor or the Dean of Students about taking a short deferment or adjusting your workload.",
+            "Don't ignore exhaustion. High-stress periods are common, but persistent lack of motivation should be discussed with a counselor to help you find a healthy balance again."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "BurnoutSupport",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      },
+      {
+         "intent": "Mess Timetable",
+         "text": [
+            "Mess TimeTable",
+            "what is the Mess Table",
+            "Bus Timetable",
+            "timetable",
+            "what is the timetable",
+            "what is the bus timetable",
+            "Academic Calander"
+         ],
+         "responses": [
+            "Timetable Link visit the students portal.",
+            "The University Noticeboard has the timetable."
+         ],
+         "extension": {
+            "function": "",
+            "entities": false,
+            "responses": []
+         },
+         "context": {
+            "in": "",
+            "out": "MessQueries",
+            "clear": true
+         },
+         "entityType": "NA",
+         "entities": []
+      }
+   ]
+}

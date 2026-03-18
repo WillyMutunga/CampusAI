@@ -20,7 +20,10 @@
         "Good to see you again",
         "Hi there, how can I help?",
         "Hello!",
-        "Good to see you again!"
+        "Good to see you again!",
+        "Hello! I am your CampusAI Assistant. How can I help you today?",
+        "Good to see you again! Feel free to ask me anything about MNU.",
+        "Hi there, how can I help you navigate Mama Ngina University?"
       ]
     },
     {
@@ -46,7 +49,10 @@
         "Sad to see you go :(",
         "Talk to you later",
         "Goodbye!",
-        "Come back soon"
+        "Come back soon",
+        "Goodbye! Have a great day at Mama Ngina University.",
+        "Talk to you later!",
+        "Come back soon!"
       ]
     },
     {
@@ -122,7 +128,8 @@
         "who designed you"
       ],
       "responses": [
-        "College students"
+        "College students",
+        "Willy Mutunga"
       ]
     },
     {
@@ -146,7 +153,9 @@
         "You can call me Mind Reader.",
         "I'm Mind Reader",
         "I am a Chatbot.",
-        "I am your helper"
+        "I am your helper",
+        "You can call me CampusAI.",
+        "I'm CampusAI"
       ]
     },
     {
@@ -168,10 +177,23 @@
         "when should i attend college",
         "what is my college time",
         "college timing",
-        "timing college"
+        "timing college",
+        "timing of university",
+        "what is university timing",
+        "when is the university open",
+        "university timing",
+        "what about university timing",
+        "is university open on saturday",
+        "tell something about university timing",
+        "what is the university  hours",
+        "when should i come to university",
+        "when should i attend university",
+        "what is my university time",
+        "timing university"
       ],
       "responses": [
-        "College is open 8am-5pm Monday-Saturday!"
+        "College is open 8am-5pm Monday-Saturday!",
+        "University is open 8am-5pm Monday-Friday!"
       ]
     },
     {
@@ -191,10 +213,15 @@
         "how can i call you",
         "phone number",
         "phone no",
-        "call"
+        "call",
+        "how to contact university",
+        "university telephone number",
+        "university number",
+        "University phone no?"
       ],
       "responses": [
-        "You can contact at: NUMBER"
+        "You can contact at: NUMBER",
+        "You can contact at: 0702125192"
       ]
     },
     {
@@ -226,10 +253,22 @@
         "AI/Ml",
         "Mechanical engineering",
         "Chemical engineering",
-        "Civil engineering"
+        "Civil engineering",
+        "courses offered in the university",
+        "computer science?",
+        "Bsc Computer Science",
+        "Bsc Mathematics and Computer Science",
+        "Statistics and Programming",
+        "Economics and Finance",
+        "Bachelor of Commerce",
+        "Bsc Nursing",
+        "Counselling Psychology",
+        "Public Policy and Administratiom"
       ],
       "responses": [
-        "Our university offers Information Technology, computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
+        "Our university offers Information Technology, computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering.",
+        "Our university offers Bsc Computer Science, Bsc Mathematics and Computer Science, Statistics and Programming, Economics and Finance, Bachelor of Commerce, Bsc Nursing, Counselling Psychology, Public Policy and Administratiom, etc.",
+        "View courses offered here <a target=\"_blank\" href=\"https://mnu.ac.ke/undergraduate-courses-2//\"> here</a>"
       ]
     },
     {
@@ -257,10 +296,17 @@
         "fees for Ac room for girls",
         "fees for non-Ac room for girls",
         "fees for Ac room for boys",
-        "fees for non-Ac room for boys"
+        "fees for non-Ac room for boys",
+        "bank account details",
+        "Equity bank mnu",
+        "how much is school fees",
+        "fee structure",
+        "semester fee"
       ],
       "responses": [
-        "For Fee detail visit <a target=\"_blank\" href=\"LINK\"> here</a>"
+        "For Fee detail visit <a target=\"_blank\" href=\"LINK\"> here</a>",
+        "Fees are payable to: Equity Bank (A/C: 0660282250603) or Co-operative Bank (A/C: 01129556920900). First-semester fee for new students is approx KES 34,700.",
+        "For Fee detail visit the student finance office located at the main adminstration block, lower ground."
       ]
     },
     {
@@ -279,10 +325,23 @@
         "whats is the college address",
         "what is the address of college",
         "address",
-        "location"
+        "location",
+        "where is the university located",
+        "university is located at",
+        "where is university",
+        "where is university located",
+        "address of university",
+        "how to reach university",
+        "university location",
+        "university address",
+        "wheres the university",
+        "how can I reach university",
+        "whats is the university address",
+        "what is the address of university"
       ],
       "responses": [
-        "<a target=\"_blank\" href=\"ADD YOU GOOGLE MAP LINK HERE\"> here</a>"
+        "<a target=\"_blank\" href=\"ADD YOU GOOGLE MAP LINK HERE\"> here</a>",
+        "<a target=\"_blank\" href=\"https://maps.app.goo.gl/NDEnuWKBEAUJ7oyK9\"> here</a>"
       ]
     },
     {
@@ -309,10 +368,16 @@
         "where is the hostel",
         "how big is the hostel",
         "distance between college and hostel",
-        "distance between hostel and college"
+        "distance between hostel and college",
+        "Does university provide hostel",
+        "how far is hostel from university",
+        "hostel university distance",
+        "distance between university and hostel",
+        "distance between hostel and university"
       ],
       "responses": [
-        "For hostel detail visit <a target=\"_blank\" href=\"ADD YOUR HOSTEL DETAIL PDF LINK OR ANY INFORMATION LINK OR ADD YOU OWN ANSWERS\"> here</a>"
+        "For hostel detail visit <a target=\"_blank\" href=\"ADD YOUR HOSTEL DETAIL PDF LINK OR ANY INFORMATION LINK OR ADD YOU OWN ANSWERS\"> here</a>",
+        "For hostel detail visit <a target=\"_blank\" href=\"https://studentportal.mnu.ac.ke/\"> here</a>"
       ]
     },
     {
@@ -331,7 +396,8 @@
         "what about events"
       ],
       "responses": [
-        "For event detail visit <a target=\"_blank\" href=\"ADD YOUR FUNCTIONS LINK OR YOUR OWN RESPONSE\"> here</a>"
+        "For event detail visit <a target=\"_blank\" href=\"ADD YOUR FUNCTIONS LINK OR YOUR OWN RESPONSE\"> here</a>",
+        "For event detail visit <a target=\"_blank\" href=\"https://mnu.ac.ke/wp-content/uploads/2025/08/Calender-Of-Activities-2025-2026-Academic.pdf\"> here</a>"
       ]
     },
     {
@@ -352,7 +418,8 @@
         "documents needed"
       ],
       "responses": [
-        "To know more about document required visit <a target=\"_blank\" href=\"ADD LINK OF ADMISSION GUIDANCE DOCUMENT FROM YOUR UNIVERSITY WEBSITE\"> here</a>"
+        "To know more about document required visit <a target=\"_blank\" href=\"ADD LINK OF ADMISSION GUIDANCE DOCUMENT FROM YOUR UNIVERSITY WEBSITE\"> here</a>",
+        "To know more about documents required visit <a target=\"_blank\" href=\"https://admissions.mnu.ac.ke/\"> here</a>"
       ]
     },
     {
@@ -367,7 +434,8 @@
         "floors"
       ],
       "responses": [
-        "My College has total 2 floors "
+        "My College has total 2 floors ",
+        "My College has a modern lecture theatre, adminstration block and Tuition complex which give the best ambience for student studies. "
       ]
     },
     {
@@ -382,7 +450,8 @@
         "What is next lecture"
       ],
       "responses": [
-        "Timetable provide direct to the students OR To know about syllabus visit <a target=\"_blank\" href=\"TIMETABLE LINK\"> here</a>"
+        "Timetable provide direct to the students OR To know about syllabus visit <a target=\"_blank\" href=\"TIMETABLE LINK\"> here</a>",
+        "Timetable are provided to the students OR To know about syllabus visit your respective school for guidance"
       ]
     },
     {
@@ -401,10 +470,18 @@
         "Library information",
         "Library books information",
         "Tell me about library",
-        "how many libraries"
+        "how many libraries",
+        "library hours",
+        "is the library open on sunday?",
+        "library contact",
+        "past papers",
+        "e-resources",
+        "Where is the library?"
       ],
       "responses": [
-        "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"ADD LIBRARY DETAIL LINK\">here</a>"
+        "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"ADD LIBRARY DETAIL LINK\">here</a>",
+        "The library is open Mon-Fri (8am-6pm) and Sat (9am-6pm). Closed on Sundays. Access e-resources at library.mnu.ac.ke.",
+        "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"https://library.mnu.ac.ke/\">here</a>"
       ]
     },
     {
@@ -449,7 +526,8 @@
         "What is there to eat?"
       ],
       "responses": [
-        "we serve Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali and many more on menu"
+        "we serve Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali and many more on menu",
+        "The canteens at the university have a variety of food available. Please visit the canteens to get more info"
       ]
     },
     {
@@ -487,10 +565,15 @@
         "Who is computer HOD",
         "Where is computer HOD",
         "computer hod",
-        "name of computer hod"
+        "name of computer hod",
+        "Who is computing COD",
+        "Where is computing COD",
+        "computing COD",
+        "name of computing COD"
       ],
       "responses": [
-        "All engineering departments have only one hod XYZ who available on (PLACE NAME)"
+        "All engineering departments have only one hod XYZ who available on (PLACE NAME)",
+        "Dr Elijah Maseno is the COD of Computing Information Technology department."
       ]
     },
     {
@@ -517,7 +600,8 @@
         "name of principal"
       ],
       "responses": [
-        "XYZ is college principal and if you need any help then call your branch hod first.That is more appropriate"
+        "XYZ is college principal and if you need any help then call your branch hod first.That is more appropriate",
+        "Prof Zipporah Ng'ang'a is the university college principal and if you need any help then you can reach out the Head Student Affairs first."
       ]
     },
     {
@@ -536,7 +620,8 @@
         "when is semester"
       ],
       "responses": [
-        "Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>"
+        "Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>",
+        "Students will be notified the relevant university details via the student corporate emails. Keep an eye at your emails not to miss important information."
       ]
     },
     {
@@ -550,7 +635,8 @@
         "admission process"
       ],
       "responses": [
-        "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"LINK OF ADMISSION DOCUMENT\">website</a>"
+        "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"LINK OF ADMISSION DOCUMENT\">website</a>",
+        "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"https://admissions.mnu.ac.ke/\">website</a>"
       ]
     },
     {
@@ -581,10 +667,21 @@
         "first year scholarship",
         "second year scholarship",
         "third year scholarship",
-        "fourth year scholarship"
+        "fourth year scholarship",
+        "scholarship nursing",
+        "scholarship computer science",
+        "scholarship counselling psychology",
+        "scholarship public policy",
+        "scholarship maths and computer science",
+        "scholarship for computer",
+        "scholarship for it",
+        "scholarship for statistics",
+        "scholarship for bcom",
+        "scholarship for economics"
       ],
       "responses": [
-        "Many government scholarships are supported by our university. For details and updates visit <a target=\"_blank\" href=\"(SCHOLARSHIP DETAILS LINK)\">here</a>"
+        "Many government scholarships are supported by our university. For details and updates visit <a target=\"_blank\" href=\"(SCHOLARSHIP DETAILS LINK)\">here</a>",
+        "Many government scholarships are supported by our university. For details and updates visit the relevant pages like HELB to get details on scholarships"
       ]
     },
     {
@@ -597,7 +694,8 @@
         "facilities provided"
       ],
       "responses": [
-        "Our university's Engineering department provides fully AC Lab with internet connection, smart classroom, Auditorium, library,canteen"
+        "Our university's Engineering department provides fully AC Lab with internet connection, smart classroom, Auditorium, library,canteen",
+        "Our university's Computing department provides fully Computer Labs with internet connection, smart classroom, Auditorium, library,canteen"
       ]
     },
     {
@@ -631,7 +729,8 @@
         "do we have to wear uniform"
       ],
       "responses": [
-        "ENTER YOUR OWN UNIVERSITY UNIFORM CIRCULER"
+        "ENTER YOUR OWN UNIVERSITY UNIFORM CIRCULER",
+        "Students are encouraged to dress decently to ensure a healthy environment while in class"
       ]
     },
     {
@@ -709,7 +808,8 @@
         "please provide sports and games information"
       ],
       "responses": [
-        "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=/\"(LINK IF HAVE)\">here</a>"
+        "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=/\"(LINK IF HAVE)\">here</a>",
+        "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit the sports office at the lecture theatre"
       ]
     },
     {
@@ -790,7 +890,1321 @@
         "Academic Calander"
       ],
       "responses": [
-        "Timetable Link visit <a target=\"_blank\" href=\"https://lightningmcqueen-95.github.io/collage/index.html\"> here</a>"
+        "Timetable Link visit <a target=\"_blank\" href=\"https://lightningmcqueen-95.github.io/collage/index.html\"> here</a>",
+        "Timetable Link visit the students portal.",
+        "The University Noticeboard has the timetable."
+      ]
+    },
+    {
+      "tag": "about_mnu",
+      "patterns": [
+        "What is MNU?",
+        "Tell me about Mama Ngina University",
+        "Where is the university located?",
+        "history of mnu",
+        "Who is the mentor university?"
+      ],
+      "responses": [
+        "Mama Ngina University College (MNUC) is a constituent college of Kenyatta University, initially mentored by Moi University. It is located in Gatundu, Kiambu County."
+      ]
+    },
+    {
+      "tag": "vision_mission",
+      "patterns": [
+        "What is the vision?",
+        "university mission",
+        "core values of mnu",
+        "What is the motto?",
+        "university philosophy"
+      ],
+      "responses": [
+        "Vision: A Premier University that nurtures Competent and Value-based leaders. Mission: To provide transformative teaching, research, and community engagement. Motto: Shaping the Future."
+      ]
+    },
+    {
+      "tag": "contacts",
+      "patterns": [
+        "How do I contact MNU?",
+        "University phone number",
+        "Official email",
+        "admission office contact",
+        "registrar phone"
+      ],
+      "responses": [
+        "General Inquiry: 020-208-4004 or info@mnu.ac.ke. Admissions: admissions@mnu.ac.ke. Registrar (ASA): +254 748 868 921."
+      ]
+    },
+    {
+      "tag": "admission_docs",
+      "patterns": [
+        "what documents do i need for registration?",
+        "joining instructions",
+        "admission letter",
+        "medical form",
+        "MNU/4 form"
+      ],
+      "responses": [
+        "Required: Original admission letter, original and copies of academic certificates, and National ID. A satisfactory Medical Report (Form MNU/4) is mandatory."
+      ]
+    },
+    {
+      "tag": "academic_calendar",
+      "patterns": [
+        "When do we report?",
+        "semester dates 2025",
+        "matriculation date",
+        "When do exams start?",
+        "next semester start"
+      ],
+      "responses": [
+        "Semester 2 for 2026 begins with reporting on 6th January 2026. Lectures commence shortly after registration."
+      ]
+    },
+    {
+      "tag": "ict_support",
+      "patterns": [
+        "ict help",
+        "student email problem",
+        "how to set up 2fa",
+        "eduroam wifi",
+        "student portal issues",
+        "reset portal password"
+      ],
+      "responses": [
+        "Visit support.mnu.ac.ke for portal tickets or email ictsupport@mnu.ac.ke for email and 2FA issues. WiFi setup guides for Eduroam are on the support portal."
+      ]
+    },
+    {
+      "tag": "accommodation",
+      "patterns": [
+        "hostel facility",
+        "hostels near campus",
+        "Qwetu Kejani",
+        "where can i stay?",
+        "hostel fees"
+      ],
+      "responses": [
+        "MNU has an MOU with Qejani Hostels for safe student accommodation near campus. Students are responsible for their own meal arrangements."
+      ]
+    },
+    {
+      "tag": "clubs",
+      "patterns": [
+        "student clubs",
+        "list of societies",
+        "mentorship club",
+        "drama club",
+        "Christian union",
+        "Computer science club"
+      ],
+      "responses": [
+        "Active clubs include Mentorship, Drama, Computer Science, and spiritual groups like the Christian Union and Muslim Association."
+      ]
+    },
+    {
+      "tag": "graduation",
+      "patterns": [
+        "graduation requirements",
+        "how to hire a gown",
+        "clearance form",
+        "returning academic regalia",
+        "graduation dates"
+      ],
+      "responses": [
+        "Graduands must fill the 'Academic Gowns Hiring Form'. Failure to return regalia on time incurs a KES 500 daily penalty."
+      ]
+    },
+    {
+      "tag": "schools",
+      "patterns": [
+        "What schools are in MNU?",
+        "faculties available",
+        "departments",
+        "School of Health Sciences"
+      ],
+      "responses": [
+        "Schools include: 1. Business, Humanities and Economics, 2. Pure and Applied Sciences, and 3. Health Sciences."
+      ]
+    },
+    {
+      "tag": "student_aid",
+      "patterns": [
+        "student aid programme",
+        "financial hardship assistance",
+        "help with basic necessities",
+        "food and toiletries support",
+        "How to apply for student aid?"
+      ],
+      "responses": [
+        "The MNUC Student Aid Programme supports students facing personal or financial hardship with basic necessities like food, toiletries, and clothing. Apply by downloading the form from the Student Affairs website and submitting it to head-studentaffairs@mnu.ac.ke."
+      ]
+    },
+    {
+      "tag": "exam_irregularities",
+      "patterns": [
+        "what is an exam offence?",
+        "cheating in exams",
+        "carrying a phone in exam room",
+        "plagiarism in exams",
+        "consequences of exam irregularities"
+      ],
+      "responses": [
+        "Serious offences include possession of unauthorized materials (phones, notes), plagiarism, and impersonation. Involvement in any examination irregularity automatically leads to expulsion from the University College."
+      ]
+    },
+    {
+      "tag": "online_learning",
+      "patterns": [
+        "how to access LMS",
+        "online classes",
+        "ODeL learning",
+        "LMS student guide",
+        "KENET conference platform"
+      ],
+      "responses": [
+        "Students can access ODeL online classes via the Learning Management System (LMS). Detailed video and PDF guides for students are available on the main MNU website under Online Learning Resources."
+      ]
+    },
+    {
+      "tag": "disability_support",
+      "patterns": [
+        "services for PWDs",
+        "disability mainstreaming",
+        "accessibility on campus",
+        "extra time in exams for disability",
+        "mentorship for students with disabilities"
+      ],
+      "responses": [
+        "MNU is committed to inclusivity, providing ramps, tactile lifts, and accessible websites. Students with disabilities are allocated an extra 30 minutes in examinations and have access to mentorship services."
+      ]
+    },
+    {
+      "tag": "security_emergency",
+      "patterns": [
+        "security hotline",
+        "emergency number",
+        "What to do in an emergency?",
+        "security on campus",
+        "how to report a crime"
+      ],
+      "responses": [
+        "In case of emergency, contact the Security Hotline at +254 741 016 799 or email security@mnu.ac.ke. Emergency notifications are also broadcasted via the university website and student email."
+      ]
+    },
+    {
+      "tag": "complaints_feedback",
+      "patterns": [
+        "how to file a complaint",
+        "feedback and compliments",
+        "complaints desk location",
+        "MNU feedback email"
+      ],
+      "responses": [
+        "Complaints and compliments can be submitted via email to feedback@mnu.ac.ke. Physically, you can visit the Administration Building, Room 207, to fill out the official form."
+      ]
+    },
+    {
+      "tag": "helb_loans",
+      "patterns": [
+        "HELB loan application",
+        "student loans in Kenya",
+        "how to apply for HELB",
+        "HELB products for students"
+      ],
+      "responses": [
+        "Students can apply for HELB loans and scholarships through the official HELB mobile app or website. For assistance, students can visit Huduma Centres or the HELB Student Service Centre."
+      ]
+    },
+    {
+      "tag": "elections_conduct",
+      "patterns": [
+        "SAMNUC elections",
+        "voting rights at MNU",
+        "election offences",
+        "conduct during campaigns",
+        "student leadership elections"
+      ],
+      "responses": [
+        "SAMNUC elections are governed by a strict Electoral Code. Offences include use of abusive language, defacing posters, or enlisting goons. Breaching this code can lead to disqualification and disciplinary action by the University College Student Disciplinary Committee."
+      ]
+    },
+    {
+      "tag": "careers_vacancies",
+      "patterns": [
+        "job opportunities at MNU",
+        "teaching vacancies",
+        "internal advertisements",
+        "how to apply for a job at the university",
+        "careers portal",
+        "work at Mama Ngina University"
+      ],
+      "responses": [
+        "All career opportunities and job vacancies are posted on the 'Vacancies' section of the official MNU website. Applications should typically be sent to the Office of the Principal or via vacancies@mnu.ac.ke as specified in the advertisement."
+      ]
+    },
+    {
+      "tag": "tenders_procurement",
+      "patterns": [
+        "tender notices",
+        "procurement opportunities",
+        "supply of goods and services",
+        "tender documents download",
+        "pre-qualification of suppliers"
+      ],
+      "responses": [
+        "Interested bidders can find active tender notices on the university website under the 'Tenders' tab. Completed documents are usually submitted to the tender box at the Administration Block or via tenders@mnu.ac.ke."
+      ]
+    },
+    {
+      "tag": "alumni_association",
+      "patterns": [
+        "MNU alumni association",
+        "how to join alumni",
+        "alumni benefits",
+        "networking for graduates",
+        "alumni office contact",
+        "graduate networking",
+        "alumni office email"
+      ],
+      "responses": [
+        "The MNU Alumni Association focuses on maintaining a lifelong connection between the university and its graduates. You can register as an alumnus upon graduation to access networking events and mentorship opportunities by contacting alumni@mnu.ac.ke.",
+        "Register with the MNU Alumni Association upon graduation to network with professionals and give back to the institution. Contact: alumni@mnu.ac.ke."
+      ]
+    },
+    {
+      "tag": "counseling_mental_health",
+      "patterns": [
+        "counseling services",
+        "mental health support",
+        "where to get psychological help",
+        "depression and anxiety support",
+        "talk to a counselor"
+      ],
+      "responses": [
+        "The University provides confidential counseling services through the Office of the Dean of Students. Students can walk into the Student Affairs office or book an appointment via email for support with academic, social, or personal challenges."
+      ]
+    },
+    {
+      "tag": "transport_shuttle",
+      "patterns": [
+        "university bus schedule",
+        "transport services",
+        "shuttle to Gatundu town",
+        "transport for academic trips"
+      ],
+      "responses": [
+        "The university provides transport services for official academic trips and organized student events. Daily shuttle schedules for staff and students between the campus and Gatundu town are usually posted on the notice boards."
+      ]
+    },
+    {
+      "tag": "student_conduct_rules",
+      "patterns": [
+        "university rules and regulations",
+        "student code of conduct",
+        "disciplinary procedures",
+        "rules on demonstrations",
+        "alcohol and drug policy"
+      ],
+      "responses": [
+        "Students are expected to adhere to the MNU Student Code of Conduct, which prohibits drug abuse, violence, and unauthorized demonstrations. Breaches are handled by the Student Disciplinary Committee and can lead to suspension or expulsion."
+      ]
+    },
+    {
+      "tag": "research_publications",
+      "patterns": [
+        "university research papers",
+        "institutional repository",
+        "research policy",
+        "MNU journal",
+        "funding for research"
+      ],
+      "responses": [
+        "MNU promotes research through its Research, Innovation, and Outreach (RIO) office. Academic staff and students' research works are hosted on the MNU Institutional Repository (e-space) for global visibility."
+      ]
+    },
+    {
+      "tag": "downloads_forms",
+      "patterns": [
+        "download application forms",
+        "inter-faculty transfer form",
+        "missing marks form",
+        "deferment form",
+        "clearance form download"
+      ],
+      "responses": [
+        "Commonly used forms such as the Admission Medical Form (MNU/4), Deferment forms, and Clearance forms are available for download in the 'Downloads' section of the university website."
+      ]
+    },
+    {
+      "tag": "news_updates",
+      "patterns": [
+        "latest news from MNU",
+        "university announcements",
+        "upcoming events",
+        "press releases",
+        "what is happening on campus?"
+      ],
+      "responses": [
+        "Stay updated by checking the 'Latest News' and 'Announcements' sections on the university home page. Recent updates include ISO certification progress and professional academy launches."
+      ]
+    },
+    {
+      "tag": "governance_council",
+      "patterns": [
+        "who is the chancellor?",
+        "university council members",
+        "Who is the Chairman of the Council?",
+        "university management team",
+        "governance structure of mnu"
+      ],
+      "responses": [
+        "Mama Ngina University College is governed by a University Council chaired by Dr. Mutuku Matingi. The management is led by the Principal, Prof. Zipporah Ng'ang'a, supported by the Deputy Principal (ASA)."
+      ]
+    },
+    {
+      "tag": "environmental_policy",
+      "patterns": [
+        "environmental sustainability",
+        "is MNU green?",
+        "tree planting initiatives",
+        "waste management policy",
+        "climate change center"
+      ],
+      "responses": [
+        "MNU is committed to environmental sustainability through its 'Green Campus' initiative. This includes regular tree-planting events, sustainable waste management, and the establishment of the Center for Climate Change and Environmental Studies."
+      ]
+    },
+    {
+      "tag": "gender_mainstreaming",
+      "patterns": [
+        "gender policy",
+        "equality on campus",
+        "prevention of sexual harassment",
+        "gender desk location",
+        "support for female students"
+      ],
+      "responses": [
+        "MNU maintains a zero-tolerance policy towards sexual harassment and gender-based violence. The Gender Mainstreaming Committee ensures equal opportunities and provides a secure reporting mechanism via the Gender Desk in the Student Affairs office."
+      ]
+    },
+    {
+      "tag": "academic_partnerships",
+      "patterns": [
+        "KU mentorship",
+        "Kenyatta University link",
+        "university collaborations",
+        "industrial attachments link",
+        "MOU with other institutions"
+      ],
+      "responses": [
+        "As a constituent college of Kenyatta University (KU), MNU benefits from KU\u00e2\u20ac\u2122s academic mentorship and quality assurance frameworks. The university also maintains MOUs with various industrial partners for student attachments and internships.",
+        "As a constituent college of Kenyatta University (KU), MNU benefits from KU\u2019s academic mentorship and quality assurance frameworks. The university also maintains MOUs with various industrial partners for student attachments and internships."
+      ]
+    },
+    {
+      "tag": "performance_contracting",
+      "patterns": [
+        "service delivery charter",
+        "performance contract",
+        "university ranking",
+        "public service standards",
+        "citizen delivery charter"
+      ],
+      "responses": [
+        "MNU adheres to the Government of Kenya Performance Contracting guidelines to ensure efficiency. Our Service Delivery Charter, visible in all administrative blocks, outlines our commitment to timely and transparent service for all stakeholders."
+      ]
+    },
+    {
+      "tag": "anti_corruption",
+      "patterns": [
+        "corruption reporting",
+        "anti-corruption committee",
+        "integrity at MNU",
+        "how to report bribery",
+        "ethics and transparency"
+      ],
+      "responses": [
+        "MNU has a dedicated Corruption Prevention Committee. You can report any unethical behavior or bribery anonymously through the corruption reporting boxes placed around campus or via integrity@mnu.ac.ke."
+      ]
+    },
+    {
+      "tag": "student_medical_insurance",
+      "patterns": [
+        "student insurance",
+        "NHIF for students",
+        "medical cover on campus",
+        "inpatient and outpatient student services"
+      ],
+      "responses": [
+        "All students are required to have a valid NHIF cover or an equivalent medical insurance. This ensures access to both inpatient services at recognized hospitals and outpatient care at the University Health Unit."
+      ]
+    },
+    {
+      "tag": "procurement",
+      "patterns": [
+        "What is university procurement",
+        "What is average package",
+        "companies visit",
+        "package",
+        "About procurement",
+        "procurement",
+        "recruitment",
+        "companies"
+      ],
+      "responses": [
+        "To know about procurement visit <a target=\"_blank\" href=\"https://procurement.mnu.ac.ke/\">here</a>"
+      ]
+    },
+    {
+      "tag": "Dean SHS",
+      "patterns": [
+        "Who is Dean SHS",
+        "Where is Dean SHS",
+        "Dean SHS",
+        "name of Dean SHS"
+      ],
+      "responses": [
+        "Dr Ruth Mbugua is the Dean of School of Health Sciences"
+      ]
+    },
+    {
+      "tag": "COD",
+      "patterns": [
+        "Who is COD",
+        "Where is COD",
+        "COD",
+        "name of COD"
+      ],
+      "responses": [
+        "COD is the name of the chair of a department. You can reach out to your respective school for any queries or concerns."
+      ]
+    },
+    {
+      "tag": "dean",
+      "patterns": [
+        "dean",
+        "dean name",
+        "who is the dean"
+      ],
+      "responses": [
+        "Deans differ for each branch, please be more specific like: (dean SPAS, SBEH, SHS)"
+      ]
+    },
+    {
+      "tag": "Password Recovery",
+      "patterns": [
+        "Forgot password"
+      ],
+      "responses": []
+    },
+    {
+      "tag": "password recovery",
+      "patterns": [
+        "Forgot password",
+        "Forgot my password",
+        "How to recover my password",
+        "password recovery",
+        "password reset"
+      ],
+      "responses": [
+        "To reset your email password please submit a ticket to the ICT department through <a target=\"_blank\" href=\"https://support.mnu.ac.ke/here\">https://support.mnu.ac.ke/here</a>"
+      ]
+    },
+    {
+      "tag": "incomplete_grades",
+      "patterns": [
+        "what is an 'I' grade?",
+        "how to clear an incomplete",
+        "missing marks in my transcript",
+        "not seeing a grade for a unit I sat for",
+        "incomplete grade policy"
+      ],
+      "responses": [
+        "An 'I' (Incomplete) means a grade wasn't finalized. You must fill out a Missing Marks form at the Registrar (ASA) office to have it cleared before the next semester.",
+        "Don't ignore missing marks! Contact your lecturer or the HOD immediately to ensure your scripts are verified and the correct grade is uploaded to the portal."
+      ]
+    },
+    {
+      "tag": "deans_list",
+      "patterns": [
+        "how to get on the Dean's List",
+        "academic excellence awards",
+        "benefits of a high GPA",
+        "being recognized for top performance",
+        "what is the cut-off for honors?"
+      ],
+      "responses": [
+        "Academic excellence is celebrated! To make the Dean's List, you typically need a semester GPA of 3.7 or higher. This recognition is a great addition to your CV.",
+        "Students with exceptional performance are often eligible for internal scholarships or mentorship opportunities. Keep aiming for that First Class!."
+      ]
+    },
+    {
+      "tag": "credit_transfers",
+      "patterns": [
+        "transferring credits from another uni",
+        "exemption for diploma holders",
+        "moving my units to a different degree",
+        "can I skip some units if I have a certificate?",
+        "credit waiver policy"
+      ],
+      "responses": [
+        "Credit transfers are possible for students coming from recognized institutions. You must apply through the Registrar (ASA) with your official transcripts for evaluation.",
+        "Diploma holders may be eligible for exemptions in specific first-year units. Submit your application early in the semester to the Admissions office for processing."
+      ]
+    },
+    {
+      "tag": "graduation_audit",
+      "patterns": [
+        "am I ready to graduate?",
+        "how to check if I cleared all units",
+        "graduation eligibility check",
+        "missing units for graduation",
+        "transcript verification for final years"
+      ],
+      "responses": [
+        "A graduation audit ensures you've met all requirements. Visit the Registrar (ASA) office during your final year to verify your transcript and clear any pending issues.",
+        "Ensure you have no 'F' grades or 'I' grades in your record. You must also have met the minimum number of credit hours for your specific degree program."
+      ]
+    },
+    {
+      "tag": "grade_appeals",
+      "patterns": [
+        "how to appeal a grade",
+        "requesting a remark of an exam",
+        "I am unhappy with my results",
+        "disputing a lecturer's grade",
+        "re-evaluation process"
+      ],
+      "responses": [
+        "You have a right to appeal if you believe a grade is incorrect. This involves a formal application to the Registrar (ASA) and paying a prescribed remarking fee.",
+        "Appeals must be done within a specific timeframe after results are released. Talk to your HOD first to see if the issue can be resolved departmentally."
+      ]
+    },
+    {
+      "tag": "time_management",
+      "patterns": [
+        "how to create a study timetable",
+        "avoiding procrastination",
+        "balancing work and school",
+        "managing my time effectively",
+        "too many assignments at once"
+      ],
+      "responses": [
+        "Effective time management is a skill! Use a planner to track deadlines and try the Eisenhower Matrix to prioritize tasks. You can also get tips from the Mentorship Club.",
+        "Start assignments early to avoid last-minute stress. Break large projects into smaller tasks and set specific goals for each study session."
+      ]
+    },
+    {
+      "tag": "note_taking_methods",
+      "patterns": [
+        "how to take better notes",
+        "Cornell note taking system",
+        "best way to summarize lectures",
+        "digital vs paper notes",
+        "mind mapping for studies"
+      ],
+      "responses": [
+        "Try the Cornell Method: divide your page into notes, cues, and a summary. This makes reviewing much faster! Check the library for study skills resources.",
+        "Visual learners often benefit from mind mapping. Use different colors to link concepts. Experiment with both digital tools and traditional notebooks to see what fits you best."
+      ]
+    },
+    {
+      "tag": "research_skills",
+      "patterns": [
+        "how to find academic sources",
+        "using Google Scholar for assignments",
+        "how to search the library catalog",
+        "finding peer-reviewed journals",
+        "library databases for computer science"
+      ],
+      "responses": [
+        "The MNU Library provides access to various e-resources. Visit library.mnu.ac.ke to use the OPAC (Online Public Access Catalog) and search for specific journals.",
+        "For credible research, always look for peer-reviewed articles. The library staff offers training on information literacy to help you master these tools."
+      ]
+    },
+    {
+      "tag": "presentation_tips",
+      "patterns": [
+        "how to give a good presentation",
+        "fear of public speaking",
+        "creating effective PowerPoint slides",
+        "how to present my project",
+        "group presentation tips"
+      ],
+      "responses": [
+        "Confidence comes with practice! Keep your slides simple\u00e2\u20ac\u201duse more visuals and less text. Join the Drama Club to practice your public speaking skills in a safe environment.",
+        "Engage your audience by making eye contact and asking questions. If you're nervous, try practicing in front of a mirror or with a small group of friends first.",
+        "Confidence comes with practice! Keep your slides simple\u2014use more visuals and less text. Join the Drama Club to practice your public speaking skills in a safe environment."
+      ]
+    },
+    {
+      "tag": "plagiarism_prevention",
+      "patterns": [
+        "how to avoid plagiarism",
+        "what is academic integrity?",
+        "citing sources correctly",
+        "APA vs MLA referencing",
+        "is using AI cheating?",
+        "what is turnitin?",
+        "academic cheating policy",
+        "citing academic work",
+        "avoiding plagiarism in reports"
+      ],
+      "responses": [
+        "Academic integrity is non-negotiable. Always cite your sources! The university uses specific referencing styles like APA. Plagiarism can lead to expulsion.",
+        "Using AI to generate entire assignments is considered an exam offence. Use it only for brainstorming or research, and always acknowledge its use as per your department's guidelines.",
+        "Academic integrity is strictly enforced. Always cite your sources using APA format. Plagiarism or using unauthorized materials in exams can lead to immediate expulsion."
+      ]
+    },
+    {
+      "tag": "sleep_hygiene",
+      "patterns": [
+        "I can't sleep",
+        "insomnia due to stress",
+        "trouble sleeping before exams",
+        "how to improve my sleep",
+        "always feeling tired"
+      ],
+      "responses": [
+        "Sleep is vital for cognitive function. Try to maintain a consistent sleep schedule and avoid screens 30 minutes before bed. If your insomnia is linked to persistent anxiety, please visit the University Health Unit for a check-up.",
+        "Chronic tiredness can affect your grades. Speak to a counselor at the Student Affairs office to discuss stress management techniques that can help improve your rest."
+      ]
+    },
+    {
+      "tag": "grief_and_loss",
+      "patterns": [
+        "I lost a family member",
+        "dealing with bereavement",
+        "death of a loved one",
+        "how to cope with loss while in school",
+        "I need time off for a funeral"
+      ],
+      "responses": [
+        "We are deeply sorry for your loss. Please reach out to the Dean of Students to discuss compassionate leave and access grief counseling. Taking care of your mental health during this time is the priority.",
+        "Bereavement is a heavy burden. The university offers psychological support to help you navigate this difficult period. Contact the Student Affairs office to book an appointment with a counselor."
+      ]
+    },
+    {
+      "tag": "homesickness",
+      "patterns": [
+        "I miss my family",
+        "wanting to go home",
+        "struggling with being away from home",
+        "first time away from my parents",
+        "feeling lonely in Gatundu"
+      ],
+      "responses": [
+        "It's completely normal to miss home, especially in your first year. Try to stay connected with family via calls, but also engage in campus activities like the Mentorship Club to build a new community here.",
+        "Adjusting to a new environment takes time. Visit the Student Affairs office for tips on managing the transition, or join a student society to meet others who are in the same boat."
+      ]
+    },
+    {
+      "tag": "relationship_conflict",
+      "patterns": [
+        "problems with my roommate",
+        "how to handle a breakup",
+        "toxic friendships",
+        "conflict with a classmate",
+        "roommate agreement help"
+      ],
+      "responses": [
+        "Interpersonal conflicts can be distracting. If you're having trouble with a roommate, try a calm conversation first. If it persists, the Dean of Students' office can assist with mediation.",
+        "Navigating relationships is part of growth. If a breakup or friendship conflict is affecting your studies, our counselors are available for confidential support."
+      ]
+    },
+    {
+      "tag": "academic_burnout",
+      "patterns": [
+        "I feel exhausted with school",
+        "losing interest in my degree",
+        "I want to drop out",
+        "mental exhaustion from studies",
+        "cannot focus on lectures anymore"
+      ],
+      "responses": [
+        "Burnout is a sign you need a break. Consider talking to your academic advisor or the Dean of Students about taking a short deferment or adjusting your workload.",
+        "Don't ignore exhaustion. High-stress periods are common, but persistent lack of motivation should be discussed with a counselor to help you find a healthy balance again."
+      ]
+    },
+    {
+      "tag": "student_id_issuance",
+      "patterns": [
+        "how to get a student ID",
+        "first year ID card process",
+        "where to take ID photos",
+        "ID card collection",
+        "student identification card"
+      ],
+      "responses": [
+        "New students are issued ID cards upon completion of registration. You must have your original admission letter and provide four 1-inch studio-quality photos to the Admissions Office for processing."
+      ]
+    },
+    {
+      "tag": "lost_found",
+      "patterns": [
+        "I lost my bag",
+        "lost and found office",
+        "reporting a lost item",
+        "where to find lost keys",
+        "missing phone on campus"
+      ],
+      "responses": [
+        "All lost and found items should be reported or handed over to the University Security Office located at the main gate or the Student Affairs office. Please carry your student ID for verification when claiming an item."
+      ]
+    },
+    {
+      "tag": "deferment_procedure",
+      "patterns": [
+        "how to defer my studies",
+        "taking a break from school",
+        "postponing a semester",
+        "deferment form",
+        "leave of absence",
+        "how to defer a semester",
+        "postponing my studies"
+      ],
+      "responses": [
+        "To defer your studies, you must fill out a 'Request for Deferment' form available at the Registrar (ASA) office. Deferment is typically granted for one academic year and must be approved before the semester exams begin.",
+        "To defer, you must submit a formal application to the Registrar (ASA) explaining your reasons. Deferment is typically granted for one academic year, and you must clear any outstanding fees before the request is approved."
+      ]
+    },
+    {
+      "tag": "attachment_requirements",
+      "patterns": [
+        "industrial attachment info",
+        "when do we go for attachment?",
+        "attachment logbook",
+        "personal accident insurance for attachment",
+        "attachment assessment"
+      ],
+      "responses": [
+        "Industrial attachment is mandatory for 3rd or 4th-year students depending on the program. You must secure a Personal Accident Insurance cover, obtain a logbook from your department, and ensure your site is approved by the university coordinator."
+      ]
+    },
+    {
+      "tag": "unit_registration",
+      "patterns": [
+        "how to register for units",
+        "portal unit registration",
+        "adding or dropping a unit",
+        "unit registration deadline",
+        "portal not showing my units"
+      ],
+      "responses": [
+        "Unit registration is done online via the Student Portal at the start of every semester. Ensure you register for all core and elective units as per your course structure before the portal closes, usually in the second week of the semester."
+      ]
+    },
+    {
+      "tag": "library_fines_policy",
+      "patterns": [
+        "late book return fee",
+        "what happens if I lose a library book?",
+        "library penalties",
+        "clearing library fines",
+        "overdue books"
+      ],
+      "responses": [
+        "Late returns attract a daily fine of KES 5 per book. If a book is lost, the student is required to pay three times the current market value of the book plus a processing fee. All fines must be cleared before the end of the semester."
+      ]
+    },
+    {
+      "tag": "student_mentorship_program",
+      "patterns": [
+        "who is my mentor?",
+        "academic advising",
+        "mentorship club info",
+        "talking to a lecturer about my career",
+        "mentorship for new students"
+      ],
+      "responses": [
+        "Every student is assigned an academic mentor within their department. You can also join the MNU Mentorship Club, which facilitates peer-to-peer and professional mentorship programs throughout the semester."
+      ]
+    },
+    {
+      "tag": "exam_card_issuance",
+      "patterns": [
+        "how to get an exam card",
+        "printing my exam permit",
+        "portal exam card download",
+        "clearing fees for exam card",
+        "lost exam card"
+      ],
+      "responses": [
+        "Exam cards are generated via the Student Portal once a student has cleared at least 100% of their tuition fees and registered for all units. You must print and have the card stamped at the Finance and Registrar's offices before the exam period starts."
+      ]
+    },
+    {
+      "tag": "transcript_application",
+      "patterns": [
+        "how to get my transcript",
+        "official vs unofficial transcript",
+        "transcript for job application",
+        "results slip collection",
+        "requesting academic records"
+      ],
+      "responses": [
+        "Unofficial transcripts can be viewed and downloaded directly from the Student Portal. For an Official Transcript (with the university seal), you must apply through the Registrar (ASA) office and pay the requisite processing fee."
+      ]
+    },
+    {
+      "tag": "university_symbols",
+      "patterns": [
+        "university anthem",
+        "MNU logo meaning",
+        "university colors",
+        "what is the university song?",
+        "mace meaning"
+      ],
+      "responses": [
+        "The University Anthem is sung at all official ceremonies and reflects our motto, 'Shaping the Future'. The logo features symbols of knowledge and progress, while our official colors represent Diligence, Excellence, and Integrity."
+      ]
+    },
+    {
+      "tag": "internal_course_transfer",
+      "patterns": [
+        "change my degree",
+        "switch from IT to CS",
+        "internal transfer process",
+        "how to change courses",
+        "inter-faculty transfer"
+      ],
+      "responses": [
+        "Internal transfers are processed in the first two weeks of the first semester. You must meet the cluster points for the new program and apply through the Registrar (ASA) using the Inter-Faculty Transfer Form."
+      ]
+    },
+    {
+      "tag": "special_exams",
+      "patterns": [
+        "what is a special exam?",
+        "missing exams due to sickness",
+        "applying for special examinations",
+        "special paper requirements"
+      ],
+      "responses": [
+        "Special exams are granted to students who miss regular exams due to medical reasons or other compassionate grounds. You must provide supporting evidence (e.g., a medical report) to the Registrar (ASA) within 48 hours."
+      ]
+    },
+    {
+      "tag": "helb_application",
+      "patterns": [
+        "how to apply for HELB",
+        "HELB loan for first years",
+        "HELB deadline",
+        "student loan status",
+        "M-Pesa HELB payment"
+      ],
+      "responses": [
+        "Apply for HELB via the official HELB mobile app or website. Ensure you have a valid KRA PIN, National ID, and your parents' details ready for the application."
+      ]
+    },
+    {
+      "tag": "work_study_program",
+      "patterns": [
+        "student jobs on campus",
+        "work study opportunities",
+        "working in the library",
+        "how to apply for work study"
+      ],
+      "responses": [
+        "The Work-Study Program supports students with financial needs by providing part-time jobs in the library or administrative offices. Applications are handled by the Dean of Students' office at the start of the semester."
+      ]
+    },
+    {
+      "tag": "wifi_eduroam",
+      "patterns": [
+        "how to connect to eduroam",
+        "campus wifi password",
+        "wifi configuration for students",
+        "eduroam login issues"
+      ],
+      "responses": [
+        "To connect to 'Eduroam' WiFi, use your university corporate email as the username and your portal password. Detailed configuration guides for Android and Windows are available on the support portal."
+      ]
+    },
+    {
+      "tag": "lms_access",
+      "patterns": [
+        "how to log into LMS",
+        "online class portal",
+        "LMS password reset",
+        "accessing course materials online"
+      ],
+      "responses": [
+        "The Learning Management System (LMS) can be accessed via lms.mnu.ac.ke. Use your Admission Number and the password provided during orientation to log in and access course materials."
+      ]
+    },
+    {
+      "tag": "smart_card_id",
+      "patterns": [
+        "biometric registration",
+        "smart card ID collection",
+        "lost smart card",
+        "student card activation"
+      ],
+      "responses": [
+        "MNU uses a smart card for library access and exams. If your card is lost, report it to the ICT office and pay the replacement fee at the Finance office."
+      ]
+    },
+    {
+      "tag": "sports_recreation",
+      "patterns": [
+        "sports activities",
+        "joining the darts team",
+        "football training",
+        "university games",
+        "KUSF tournaments"
+      ],
+      "responses": [
+        "MNU has active teams for Football, Darts, Athletics, and Indoor Games. Darts is particularly competitive in KUSF games. Visit the Sports Coordinator at the Dean of Students' office to join."
+      ]
+    },
+    {
+      "tag": "spiritual_welfare",
+      "patterns": [
+        "Christian Union meetings",
+        "Muslim association",
+        "SDA church on campus",
+        "Catholic student services"
+      ],
+      "responses": [
+        "Spiritual groups include the Christian Union (CU), Muslim Association, SDA Association, and Catholic Students Association. They meet regularly in designated halls during non-lecture hours."
+      ]
+    },
+    {
+      "tag": "gender_desk",
+      "patterns": [
+        "reporting harassment",
+        "gender based violence support",
+        "gender desk location",
+        "safety for female students"
+      ],
+      "responses": [
+        "MNU has a zero-tolerance policy for harassment. You can report incidents to the Gender Desk in the Student Affairs office or via the confidential email: integrity@mnu.ac.ke."
+      ]
+    },
+    {
+      "tag": "peer_counseling",
+      "patterns": [
+        "student counselors",
+        "talking to a peer",
+        "mental health clubs",
+        "peer mentorship for stress"
+      ],
+      "responses": [
+        "The Mentorship Club facilitates peer counseling and mentorship. For professional support, visit the university counselor at the Student Affairs office."
+      ]
+    },
+    {
+      "tag": "stress_management",
+      "patterns": [
+        "feeling burnt out",
+        "managing school pressure",
+        "stress relief tips",
+        "handling academic workload"
+      ],
+      "responses": [
+        "Manage stress by breaking assignments into smaller tasks, taking regular breaks, and attending mentorship sessions. If pressure persists, please consult the university health unit."
+      ]
+    },
+    {
+      "tag": "graduation_gown",
+      "patterns": [
+        "hiring graduation regalia",
+        "graduation gown fee",
+        "returning the academic gown",
+        "gown hiring form"
+      ],
+      "responses": [
+        "Graduands must fill out the 'Academic Gowns Hiring Form' before collection. Regalia must be returned by the specified date to avoid a daily penalty of KES 500."
+      ]
+    },
+    {
+      "tag": "security_alert",
+      "patterns": [
+        "report a suspicious activity",
+        "security on campus",
+        "emergency hotline",
+        "security office location"
+      ],
+      "responses": [
+        "Report security issues to the main gate or call the Hotline: +254 741 016 799. Always carry your student ID for identification by security personnel."
+      ]
+    },
+    {
+      "tag": "health_unit",
+      "patterns": [
+        "medical help on campus",
+        "health clinic location",
+        "emergency nurse",
+        "university health services"
+      ],
+      "responses": [
+        "The University Health Unit provides outpatient services for basic ailments. In case of serious medical emergencies, students are referred to the nearby Gatundu Level 5 Hospital."
+      ]
+    },
+    {
+      "tag": "catering_services",
+      "patterns": [
+        "university mess menu",
+        "canteen opening hours",
+        "food on campus",
+        "where to eat at MNU"
+      ],
+      "responses": [
+        "The university canteen offers a variety of affordable meals. Students can pay for meals using cash or mobile money directly at the catering unit."
+      ]
+    },
+    {
+      "tag": "hostel_check_out",
+      "patterns": [
+        "how to check out of hostels",
+        "clearing from room",
+        "hostel clearance form",
+        "returning room keys"
+      ],
+      "responses": [
+        "To check out, ensure the room is clean, return all keys to the housekeeper, and sign the official clearance form to avoid extra charges."
+      ]
+    },
+    {
+      "tag": "samnuc_elections",
+      "patterns": [
+        "student leadership elections",
+        "how to join SAMNUC",
+        "voting for student leaders",
+        "election code of conduct"
+      ],
+      "responses": [
+        "SAMNUC elections are held annually under a strict code of conduct. Aspiring leaders must be in good academic standing and vetted by the electoral committee."
+      ]
+    },
+    {
+      "tag": "inter_faculty_transfer",
+      "patterns": [
+        "change my course",
+        "switch from IT to Computer Science",
+        "course transfer requirements",
+        "moving to another faculty"
+      ],
+      "responses": [
+        "Inter-faculty transfers are usually processed within the first two weeks of the first semester for new students. You must meet the cluster points for the new program and apply through the Registrar (ASA) office."
+      ]
+    },
+    {
+      "tag": "missing_marks",
+      "patterns": [
+        "I can't see my marks",
+        "missing results on portal",
+        "how to report missing marks",
+        "grade not showing"
+      ],
+      "responses": [
+        "For missing marks, you should fill out a 'Missing Marks Form' at your department or the Registrar (ASA) office. Ensure you have proof of sitting for the exam, such as a signed attendance list or an exam card."
+      ]
+    },
+    {
+      "tag": "academic_probation",
+      "patterns": [
+        "what is academic probation?",
+        "failing too many units",
+        "minimum GPA to stay in school",
+        "being discontinued"
+      ],
+      "responses": [
+        "A student is placed on academic probation if their GPA falls below the university's minimum threshold (usually 2.0). If you are on probation, please visit the Dean of Students for academic advising and support."
+      ]
+    },
+    {
+      "tag": "retake_policy",
+      "patterns": [
+        "how to register for a retake",
+        "failed unit retake",
+        "cost of a retake",
+        "repeating a unit"
+      ],
+      "responses": [
+        "Retakes for failed units are registered during the normal unit registration period in the semester the unit is offered. A prescribed retake fee per unit is usually applicable at the finance office."
+      ]
+    },
+    {
+      "tag": "attachment_logbook",
+      "patterns": [
+        "where to get attachment logbook",
+        "industrial attachment marks",
+        "internship assessment",
+        "attachment insurance"
+      ],
+      "responses": [
+        "Attachment logbooks are collected from your respective department office. Ensure you have a valid Personal Accident Insurance cover before starting your industrial attachment."
+      ]
+    },
+    {
+      "tag": "bursary_applications",
+      "patterns": [
+        "how to apply for university bursary",
+        "CDF bursary help",
+        "financial aid for needy students",
+        "scholarship opportunities"
+      ],
+      "responses": [
+        "The university offers limited bursaries for extremely needy students. Applications are announced via the Dean of Students' office. You can also apply for CDF or County bursaries using your fee statement as proof of registration."
+      ]
+    },
+    {
+      "tag": "nhif_student_cover",
+      "patterns": [
+        "NHIF for students",
+        "medical insurance at school",
+        "how to use NHIF at the health unit",
+        "student health cover"
+      ],
+      "responses": [
+        "All students are required to have a valid NHIF cover. You can use your NHIF card at the University Health Unit or other accredited facilities for inpatient and outpatient services."
+      ]
+    },
+    {
+      "tag": "burnout_mental_health",
+      "patterns": [
+        "I feel burnt out",
+        "too much school work stress",
+        "mental exhaustion",
+        "I want to give up",
+        "feeling overwhelmed"
+      ],
+      "responses": [
+        "Academic pressure can be overwhelming. Please take a break and speak to a counselor at the Student Affairs office. Your mental health is more important than any grade. You are not alone!"
+      ]
+    },
+    {
+      "tag": "procrastination_help",
+      "patterns": [
+        "I am procrastinating",
+        "how to stop being lazy",
+        "improving study habits",
+        "tips for finishing assignments"
+      ],
+      "responses": [
+        "Procrastination often comes from feeling overwhelmed. Try the Pomodoro technique: study for 25 minutes, then take a 5-minute break. Setting small, achievable goals each day can help you build momentum."
+      ]
+    },
+    {
+      "tag": "gender_desk_safety",
+      "patterns": [
+        "reporting harassment",
+        "sexual harassment help",
+        "gender desk location",
+        "safety on campus for women"
+      ],
+      "responses": [
+        "The university has a zero-tolerance policy for any form of harassment. Reports can be made confidentially at the Gender Desk in the Student Affairs office or to the university security office."
+      ]
+    },
+    {
+      "tag": "ict_ticketing",
+      "patterns": [
+        "report portal problem",
+        "ICT support ticket",
+        "wifi not working help",
+        "email account locked"
+      ],
+      "responses": [
+        "For ICT issues, you can raise a support ticket at the ICT helpdesk portal or visit the ICT office in the administration block for physical assistance."
+      ]
+    },
+    {
+      "tag": "library_eresources",
+      "patterns": [
+        "how to access e-books",
+        "library online journals",
+        "off-campus library access",
+        "research databases"
+      ],
+      "responses": [
+        "You can access e-resources via the library portal using your university email credentials. This includes access to journals, e-books, and research databases like IEEE or JSTOR."
+      ]
+    },
+    {
+      "tag": "lost_student_id",
+      "patterns": [
+        "I lost my school ID",
+        "replacement for student card",
+        "cost of a new student ID",
+        "reporting a lost ID card"
+      ],
+      "responses": [
+        "If you lose your ID, report to the security office and the registrar. You will need to pay a replacement fee at the finance office and provide the receipt to the ICT office for a new card."
+      ]
+    },
+    {
+      "tag": "samnuc_governance",
+      "patterns": [
+        "what is SAMNUC?",
+        "student leadership",
+        "how to join student council",
+        "who are the student leaders?"
+      ],
+      "responses": [
+        "SAMNUC is the Student Association representing your interests. Elections are held annually. You can participate by voting or running for a position if you meet the academic and disciplinary requirements."
+      ]
+    },
+    {
+      "tag": "university_anthem_motto",
+      "patterns": [
+        "what is the school motto?",
+        "university anthem lyrics",
+        "philosophy of the school"
+      ],
+      "responses": [
+        "The university motto is 'Shaping the Future.' The anthem is played at official ceremonies and reflects our commitment to excellence and transformation."
+      ]
+    },
+    {
+      "tag": "lost_and_found",
+      "patterns": [
+        "I lost my phone on campus",
+        "found a set of keys",
+        "lost and found office",
+        "where to report missing items"
+      ],
+      "responses": [
+        "Lost items are usually turned in to the main security office or the Dean of Students' office. Please check there if you have lost or found something."
+      ]
+    },
+    {
+      "tag": "clubs_and_societies",
+      "patterns": [
+        "list of clubs",
+        "how to join a society",
+        "drama club",
+        "IT club",
+        "Christian Union"
+      ],
+      "responses": [
+        "There are various clubs including the IT club, Drama club, and spiritual groups like the Christian Union. You can register for any club during the clubs' fair at the start of the semester."
+      ]
+    },
+    {
+      "tag": "gown_hiring",
+      "patterns": [
+        "how to hire a graduation gown",
+        "graduation regalia cost",
+        "returning the gown",
+        "gown collection dates"
+      ],
+      "responses": [
+        "Graduation gowns are hired after paying the graduation fee. Collection and return dates are announced by the Registrar (ASA) shortly before the graduation ceremony."
+      ]
+    },
+    {
+      "tag": "alumni_network",
+      "patterns": [
+        "joining alumni association",
+        "benefits for graduates",
+        "alumni office",
+        "graduation transcript"
+      ],
+      "responses": [
+        "After graduation, you become part of the Alumni Association. This network helps you stay connected with the university and provides networking opportunities for your career."
       ]
     }
   ]
